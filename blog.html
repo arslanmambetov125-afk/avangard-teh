@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог Авангард | Статьи о вилочных погрузчиках, обзоры, советы</title>
+<meta name="description" content="Блог компании Авангард. Обзоры вилочных погрузчиков CHL, Heli, Hangcha. Советы по выбору, эксплуатации, обслуживанию. Новости рынка.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#FF3B3B;--secondary:#FFB800;--accent:#00D4FF;--dark:#0A0A0F;--dark-light:#12121A;--dark-card:#1A1A24;--dark-border:#2A2A3A;--text:#FFFFFF;--text-muted:#8B8B9E;--text-dim:#5A5A6E;--success:#00E676;--gradient-primary:linear-gradient(135deg,#FF3B3B 0%,#FF6B6B 100%);--gradient-card:linear-gradient(145deg,#1A1A24 0%,#22222E 100%);--shadow-glow:0 0 40px rgba(255,59,59,0.3);--shadow-card:0 8px 32px rgba(0,0,0,0.4)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);line-height:1.6}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.animate{animation:fadeInUp .6s ease-out forwards;opacity:0}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all .4s;background:transparent}
+.header.scrolled{background:rgba(10,10,15,.95);backdrop-filter:blur(20px);padding:12px 0;border-bottom:1px solid var(--dark-border)}
+.header-container{max-width:1400px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:48px;height:48px;background:var(--gradient-primary);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:white;box-shadow:var(--shadow-glow)}
+.logo-text{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;color:var(--text)}
+.nav{display:flex;gap:8px}
+.nav a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;padding:10px 18px;border-radius:8px;transition:all .3s}
+.nav a:hover,.nav a.active{color:var(--text);background:rgba(255,255,255,.05)}
+.header-actions{display:flex;align-items:center;gap:20px}
+.header-phone{color:var(--text);text-decoration:none;font-size:16px;font-weight:700}
+.btn-primary{background:var(--gradient-primary);color:white;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;box-shadow:var(--shadow-glow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,59,59,.5)}
+.page-header{padding:140px 40px 60px;background:linear-gradient(180deg,var(--dark-light) 0%,var(--dark) 100%);border-bottom:1px solid var(--dark-border)}
+.page-header-container{max-width:1400px;margin:0 auto}
+.breadcrumb{display:flex;gap:12px;margin-bottom:30px;font-size:14px;color:var(--text-muted)}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;transition:color .3s}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{color:var(--text-dim)}
+.page-title{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:900;margin-bottom:16px}
+.page-title span{color:var(--primary)}
+.page-subtitle{font-size:18px;color:var(--text-muted);max-width:700px}
+.blog-section{padding:80px 40px 120px}
+.blog-container{max-width:1400px;margin:0 auto}
+.blog-categories{display:flex;gap:12px;margin-bottom:50px;flex-wrap:wrap}
+.blog-category{padding:12px 24px;background:var(--gradient-card);border:1px solid var(--dark-border);border-radius:12px;font-size:14px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .3s;text-decoration:none}
+.blog-category:hover,.blog-category.active{background:var(--primary);color:white;border-color:var(--primary);box-shadow:var(--shadow-glow)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.blog-card{background:var(--gradient-card);border:1px solid var(--dark-border);border-radius:24px;overflow:hidden;transition:all .4s;text-decoration:none;display:block}
+.blog-card:hover{transform:translateY(-8px);border-color:rgba(255,59,59,.3);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.blog-image{height:220px;background:linear-gradient(145deg,#1E1E2A 0%,#2A2A3E 100%);display:flex;align-items:center;justify-content:center;font-size:60px;position:relative;overflow:hidden}
+.blog-image::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,var(--dark-card),transparent)}
+.blog-badge{position:absolute;top:16px;left:16px;padding:6px 14px;background:var(--primary);color:white;border-radius:20px;font-size:12px;font-weight:700;z-index:2}
+.blog-content{padding:30px}
+.blog-date{font-size:13px;color:var(--text-dim);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+.blog-title{font-size:20px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.4;transition:color .3s}
+.blog-card:hover .blog-title{color:var(--primary)}
+.blog-excerpt{font-size:15px;color:var(--text-muted);line-height:1.7;margin-bottom:20px}
+.blog-readmore{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--primary);transition:gap .3s}
+.blog-card:hover .blog-readmore{gap:12px}
+.blog-featured{background:var(--gradient-card);border:1px solid var(--dark-border);border-radius:24px;overflow:hidden;margin-bottom:50px;display:grid;grid-template-columns:1fr 1fr;transition:all .4s}
+.blog-featured:hover{border-color:rgba(255,59,59,.3);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.blog-featured-image{height:100%;min-height:400px;background:linear-gradient(145deg,#1E1E2A 0%,#2A2A3E 100%);display:flex;align-items:center;justify-content:center;font-size:100px;position:relative}
+.blog-featured-badge{position:absolute;top:24px;left:24px;padding:8px 18px;background:var(--secondary);color:var(--dark);border-radius:20px;font-size:13px;font-weight:700}
+.blog-featured-content{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.blog-featured-date{font-size:14px;color:var(--text-dim);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.blog-featured-title{font-size:32px;font-weight:700;color:var(--text);margin-bottom:20px;line-height:1.3}
+.blog-featured-excerpt{font-size:18px;color:var(--text-muted);line-height:1.8;margin-bottom:30px}
+.blog-featured-readmore{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:var(--gradient-primary);color:white;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none;transition:all .3s;box-shadow:var(--shadow-glow);width:fit-content}
+.blog-featured-readmore:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,59,59,.5)}
+.pagination{display:flex;justify-content:center;gap:10px;margin-top:60px}
+.pagination a{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:var(--dark-card);border:1px solid var(--dark-border);color:var(--text-muted);text-decoration:none;font-size:15px;font-weight:600;transition:all .3s}
+.pagination a:hover,.pagination a.active{background:var(--primary);color:white;border-color:var(--primary)}
+.cta-section{padding:100px 40px;background:linear-gradient(135deg,var(--primary) 0%,#b71c1c 100%);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 60%)}
+.cta-container{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.cta-section h2{font-family:'Montserrat',sans-serif;font-size:42px;font-weight:900;margin-bottom:20px}
+.cta-section p{font-size:18px;opacity:.9;margin-bottom:40px}
+.cta-form{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-form input{flex:1;min-width:250px;padding:18px 24px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:14px;color:white;font-size:16px;backdrop-filter:blur(10px)}
+.cta-form input::placeholder{color:rgba(255,255,255,.7)}
+.cta-form button{padding:18px 40px;background:var(--secondary);color:var(--dark);border:none;border-radius:14px;font-size:16px;font-weight:900;cursor:pointer;transition:all .3s}
+.cta-form button:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,184,0,.4)}
+.footer{background:#050508;padding:80px 40px 40px;border-top:1px solid var(--dark-border)}
+.footer-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:60px}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.footer-brand-icon{width:44px;height:44px;background:var(--gradient-primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white}
+.footer-brand-text{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900}
+.footer-brand-text span{color:var(--primary)}
+.footer-desc{font-size:15px;color:var(--text-muted);line-height:1.7;margin-bottom:30px}
+.footer-col h4{font-size:16px;font-weight:700;margin-bottom:24px;color:var(--text)}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:12px}
+.footer-col ul li a{color:var(--text-muted);text-decoration:none;font-size:14px;transition:all .3s;display:inline-block}
+.footer-col ul li a:hover{color:var(--primary);transform:translateX(4px)}
+.footer-phone{font-size:24px;font-weight:900;color:var(--text);text-decoration:none;display:block;margin-bottom:8px}
+.footer-email{color:var(--text-muted);text-decoration:none;font-size:14px}
+.footer-bottom{max-width:1400px;margin:60px auto 0;padding-top:30px;border-top:1px solid var(--dark-border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-bottom p{font-size:14px;color:var(--text-dim)}
+.footer-bottom a{color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .3s}
+.footer-bottom a:hover{color:var(--primary)}
+@media(max-width:1200px){.blog-featured{grid-template-columns:1fr}.blog-grid{grid-template-columns:repeat(2,1fr)}.footer-container{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.page-title{font-size:32px}.blog-grid{grid-template-columns:1fr}.blog-featured-title{font-size:24px}.cta-section h2{font-size:28px}.footer-container{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+<div class="header-container">
+<a href="index.html" class="logo"><div class="logo-icon">A</div><div class="logo-text">АВАНГАРД</div></a>
+<nav class="nav">
+<a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="lizing.html">Лизинг</a><a href="service.html">Сервис</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a>
+</nav>
+<div class="header-actions">
+<a href="tel:88001234567" class="header-phone">8-800-123-45-67</a>
+<a href="index.html#cta" class="btn-primary">Получить КП</a>
+</div>
+</div>
+</header>
+
+<section class="page-header">
+<div class="page-header-container">
+<div class="breadcrumb"><a href="index.html">Главная</a><span>/</span><span>Блог</span></div>
+<h1 class="page-title">Блог <span>Авангард</span></h1>
+<p class="page-subtitle">Полезные статьи, обзоры, советы по выбору и обслуживанию вилочных погрузчиков. Будьте в курсе новинок рынка.</p>
+</div>
+</section>
+
+<section class="blog-section">
+<div class="blog-container">
+<div class="blog-categories">
+<a href="#" class="blog-category active">Все</a>
+<a href="#" class="blog-category">Обзоры</a>
+<a href="#" class="blog-category">Советы</a>
+<a href="#" class="blog-category">Сравнения</a>
+<a href="#" class="blog-category">Новости</a>
+<a href="#" class="blog-category">Лизинг</a>
+<a href="#" class="blog-category">Сервис</a>
+</div>
+
+<a href="#" class="blog-featured animate">
+<div class="blog-featured-image">
+🚜
+<div class="blog-featured-badge">🔥 Популярное</div>
+</div>
+<div class="blog-featured-content">
+<div class="blog-featured-date">15 июля 2026</div>
+<h2 class="blog-featured-title">Как выбрать вилочный погрузчик для склада: полное руководство 2026</h2>
+<p class="blog-featured-excerpt">Разбираем ключевые параметры выбора вилочного погрузчика: грузоподъемность, высота подъема, тип двигателя, условия эксплуатации. Сравниваем CHL, Heli и Hangcha по цене, качеству и надежности.</p>
+<span class="blog-featured-readmore">Читать статью →</span>
+</div>
+</a>
+
+<div class="blog-grid">
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+📊
+<div class="blog-badge">Сравнение</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">10 июля 2026</div>
+<h3 class="blog-title">CHL vs Heli vs Hangcha: сравнительный обзор китайских погрузчиков</h3>
+<p class="blog-excerpt">Сравниваем три ведущих китайских бренда по цене, качеству сборки, надежности, доступности запчастей и сервисной поддержке.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+💰
+<div class="blog-badge">Советы</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">5 июля 2026</div>
+<h3 class="blog-title">Лизинг или кредит: что выгоднее для покупки погрузчика</h3>
+<p class="blog-excerpt">Разбираем налоговые вычеты, ускоренную амортизацию и другие преимущества лизинга. Считаем на реальном примере.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+🔧
+<div class="blog-badge">Сервис</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">28 июня 2026</div>
+<h3 class="blog-title">ТОП-10 ошибок при покупке б/у вилочного погрузчика</h3>
+<p class="blog-excerpt">Как не попасть на "кота в мешке" при покупке подержанного погрузчика. На что обратить внимание при осмотре.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+⚡
+<div class="blog-badge">Обзор</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">20 июня 2026</div>
+<h3 class="blog-title">Обзор мини-погрузчика Lonking CDM308: характеристики, цена, отзывы</h3>
+<p class="blog-excerpt">Детальный обзор популярной модели мини-погрузчика. Для каких задач подходит, сколько стоит, стоит ли покупать.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+📋
+<div class="blog-badge">Советы</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">15 июня 2026</div>
+<h3 class="blog-title">Как оформить вилочный погрузчик: документы, регистрация, ПТС</h3>
+<p class="blog-excerpt">Пошаговая инструкция по оформлению вилочного погрузчика. Какие документы нужны, где регистрировать, сколько стоит.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+<a href="#" class="blog-card animate">
+<div class="blog-image">
+🔋
+<div class="blog-badge">Сравнение</div>
+</div>
+<div class="blog-content">
+<div class="blog-date">8 июня 2026</div>
+<h3 class="blog-title">Электрический или дизельный погрузчик: что выбрать в 2026</h3>
+<p class="blog-excerpt">Сравниваем эксплуатационные расходы, экологичность, удобство использования. Для каких условий какой тип лучше.</p>
+<span class="blog-readmore">Читать →</span>
+</div>
+</a>
+</div>
+
+<div class="pagination">
+<a href="#" class="active">1</a>
+<a href="#">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">→</a>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="cta-container">
+<h2>Подпишитесь на новые статьи</h2>
+<p>Получайте обзоры, советы и новости рынка вилочных погрузчиков первыми</p>
+<form class="cta-form" onsubmit="handleSubmit(event)">
+<input type="text" placeholder="Ваше имя" required>
+<input type="email" placeholder="Email" required>
+<button type="submit">Подписаться</button>
+</form>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-col">
+<div class="footer-brand"><div class="footer-brand-icon">A</div><div class="footer-brand-text">АВАНГАРД <span>ТЕХНИКА</span></div></div>
+<p class="footer-desc">Официальный дилер вилочных погрузчиков CHL, Heli, Hangcha, Lonking, Wecan. Прямые поставки с заводов. Гарантия до 3 лет.</p>
+</div>
+<div class="footer-col"><h4>Каталог</h4><ul><li><a href="catalog.html">Вилочные погрузчики</a></li><li><a href="catalog.html">Мини-погрузчики</a></li><li><a href="catalog.html">Электропогрузчики</a></li><li><a href="catalog.html">Штабелеры</a></li></ul></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="lizing.html">Лизинг</a></li><li><a href="trade-in.html">Trade-in</a></li><li><a href="service.html">Сервис</a></li><li><a href="arenda.html">Аренда</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О компании</a></li><li><a href="reviews.html">Отзывы</a></li><li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><a href="tel:88001234567" class="footer-phone">8-800-123-45-67</a><a href="mailto:info@avangard-teh.ru" class="footer-email">info@avangard-teh.ru</a></div>
+</div>
+<div class="footer-bottom"><p>© 2026 ООО "Авангард". Официальный дилер CHL, Heli, Hangcha, Lonking, Wecan.</p><div style="display:flex;gap:30px"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></div></div>
+</footer>
+
+<script>
+window.addEventListener('scroll',function(){document.getElementById('header').classList.toggle('scrolled',window.scrollY>50)});
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:0.1});
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+function handleSubmit(e){e.preventDefault();alert('Спасибо за подписку! Новые статьи будут приходить на ваш email.')}
+</script>
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис и ремонт вилочных погрузчиков | Выезд 24/7 | Авангард</title>
+    <meta name="description" content="Сервисное обслуживание и ремонт вилочных погрузчиков CHL, Heli, Hangcha. Выезд в день обращения. Гарантия на ремонт. Склад запчастей 10 000+ позиций.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF3B3B; --secondary: #FFB800; --accent: #00D4FF; --dark: #0A0A0F;
+            --dark-light: #12121A; --dark-card: #1A1A24; --dark-border: #2A2A3A;
+            --text: #FFFFFF; --text-muted: #8B8B9E; --text-dim: #5A5A6E; --success: #00E676;
+            --gradient-primary: linear-gradient(135deg, #FF3B3B 0%, #FF6B6B 100%);
+            --gradient-card: linear-gradient(145deg, #1A1A24 0%, #22222E 100%);
+            --shadow-glow: 0 0 40px rgba(255, 59, 59, 0.3); --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; transition: all 0.4s; background: transparent; }
+        .header.scrolled { background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(20px); padding: 12px 0; border-bottom: 1px solid var(--dark-border); }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: white; box-shadow: var(--shadow-glow); }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900; color: var(--text); }
+        .nav { display: flex; gap: 8px; }
+        .nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: 8px; transition: all 0.3s; }
+        .nav a:hover, .nav a.active { color: var(--text); background: rgba(255,255,255,0.05); }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .header-phone { color: var(--text); text-decoration: none; font-size: 16px; font-weight: 700; }
+        .btn-primary { background: var(--gradient-primary); color: white; padding: 12px 28px; border-radius: 10px; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; box-shadow: var(--shadow-glow); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,59,59,0.5); }
+        .btn-secondary { background: transparent; color: var(--text); padding: 12px 28px; border-radius: 10px; font-size: 14px; font-weight: 700; border: 2px solid var(--dark-border); cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+        .btn-large { padding: 18px 40px; font-size: 16px; border-radius: 14px; }
+
+        .page-header { padding: 140px 40px 60px; background: linear-gradient(180deg, var(--dark-light) 0%, var(--dark) 100%); border-bottom: 1px solid var(--dark-border); }
+        .page-header-container { max-width: 1400px; margin: 0 auto; }
+        .breadcrumb { display: flex; gap: 12px; margin-bottom: 30px; font-size: 14px; color: var(--text-muted); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb span { color: var(--text-dim); }
+        .page-title { font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900; margin-bottom: 16px; }
+        .page-title span { color: var(--primary); }
+        .page-subtitle { font-size: 18px; color: var(--text-muted); max-width: 700px; }
+
+        .service-hero { padding: 80px 40px; }
+        .service-hero-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .service-hero h2 { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 900; margin-bottom: 24px; line-height: 1.2; }
+        .service-hero h2 span { color: var(--primary); }
+        .service-hero p { font-size: 18px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+        .service-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .service-stat { background: var(--gradient-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 30px; text-align: center; transition: all 0.4s; }
+        .service-stat:hover { transform: translateY(-5px); border-color: rgba(255, 59, 59, 0.3); }
+        .service-stat-value { font-size: 36px; font-weight: 900; color: var(--primary); font-family: 'Montserrat', sans-serif; margin-bottom: 8px; }
+        .service-stat-label { font-size: 14px; color: var(--text-muted); }
+        .service-image { background: linear-gradient(145deg, #1E1E2A 0%, #2A2A3E 100%); border-radius: 24px; height: 500px; display: flex; align-items: center; justify-content: center; font-size: 150px; border: 1px solid var(--dark-border); position: relative; overflow: hidden; }
+        .service-image::after { content: '🔧'; position: absolute; bottom: 30px; right: 30px; width: 60px; height: 60px; background: rgba(255, 59, 59, 0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; backdrop-filter: blur(10px); }
+
+        .services-grid-section { padding: 80px 40px; background: var(--dark-light); border-top: 1px solid var(--dark-border); }
+        .services-grid-container { max-width: 1400px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-label { display: inline-block; background: rgba(255, 59, 59, 0.15); color: var(--primary); padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(255, 59, 59, 0.3); }
+        .section-title { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 900; margin-bottom: 16px; }
+        .section-title span { color: var(--primary); }
+        .section-subtitle { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--gradient-card); border: 1px solid var(--dark-border); border-radius: 20px; padding: 40px; transition: all 0.4s; }
+        .service-card:hover { transform: translateY(-8px); border-color: rgba(255, 59, 59, 0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .service-card-icon { width: 64px; height: 64px; background: rgba(255, 59, 59, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 24px; border: 1px solid rgba(255, 59, 59, 0.2); }
+        .service-card-title { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+        .service-card-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+        .service-card-price { font-size: 20px; font-weight: 900; color: var(--primary); }
+        .service-card-price span { font-size: 14px; color: var(--text-muted); font-weight: 400; }
+
+        .coverage-section { padding: 80px 40px; }
+        .coverage-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .coverage-map { background: linear-gradient(145deg, #1E1E2A 0%, #2A2A3E 100%); border-radius: 24px; height: 500px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--text-muted); border: 1px solid var(--dark-border); }
+        .coverage-cities { display: flex; flex-direction: column; gap: 16px; }
+        .coverage-city { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--gradient-card); border: 1px solid var(--dark-border); border-radius: 16px; transition: all 0.3s; }
+        .coverage-city:hover { border-color: rgba(255, 59, 59, 0.3); transform: translateX(8px); }
+        .coverage-city-icon { width: 48px; height: 48px; background: rgba(255, 59, 59, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .coverage-city-info h4 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+        .coverage-city-info p { font-size: 14px; color: var(--text-muted); }
+
+        .cta-section { padding: 100px 40px; background: linear-gradient(135deg, var(--primary) 0%, #b71c1c 100%); position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%); }
+        .cta-container { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+        .cta-section h2 { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 900; margin-bottom: 20px; }
+        .cta-section p { font-size: 18px; opacity: 0.9; margin-bottom: 40px; }
+        .cta-form { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .cta-form input { flex: 1; min-width: 250px; padding: 18px 24px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; color: white; font-size: 16px; backdrop-filter: blur(10px); }
+        .cta-form input::placeholder { color: rgba(255,255,255,0.7); }
+        .cta-form button { padding: 18px 40px; background: var(--secondary); color: var(--dark); border: none; border-radius: 14px; font-size: 16px; font-weight: 900; cursor: pointer; transition: all 0.3s; }
+        .cta-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,184,0,0.4); }
+
+        .footer { background: #050508; padding: 80px 40px 40px; border-top: 1px solid var(--dark-border); }
+        .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 60px; }
+        .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+        .footer-brand-icon { width: 44px; height: 44px; background: var(--gradient-primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: white; }
+        .footer-brand-text { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; }
+        .footer-brand-text span { color: var(--primary); }
+        .footer-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 30px; }
+        .footer-col h4 { font-size: 16px; font-weight: 700; margin-bottom: 24px; color: var(--text); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: all 0.3s; display: inline-block; }
+        .footer-col ul li a:hover { color: var(--primary); transform: translateX(4px); }
+        .footer-phone { font-size: 24px; font-weight: 900; color: var(--text); text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-email { color: var(--text-muted); text-decoration: none; font-size: 14px; }
+        .footer-bottom { max-width: 1400px; margin: 60px auto 0; padding-top: 30px; border-top: 1px solid var(--dark-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .footer-bottom p { font-size: 14px; color: var(--text-dim); }
+        .footer-bottom a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-bottom a:hover { color: var(--primary); }
+
+        @media (max-width: 1200px) { .service-hero-container { grid-template-columns: 1fr; gap: 40px; } .services-grid { grid-template-columns: repeat(2, 1fr); } .coverage-container { grid-template-columns: 1fr; } .footer-container { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .page-title { font-size: 32px; } .service-hero h2 { font-size: 32px; } .service-stats { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .cta-section h2 { font-size: 28px; } .footer-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">A</div>
+            <div class="logo-text">АВАНГАРД</div>
+        </a>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="lizing.html">Лизинг</a>
+            <a href="service.html" class="active">Сервис</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+        <div class="header-actions">
+            <a href="tel:88001234567" class="header-phone">8-800-123-45-67</a>
+            <a href="index.html#cta" class="btn-primary">Получить КП</a>
+        </div>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="page-header-container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>Сервис</span>
+        </div>
+        <h1 class="page-title">Сервис и ремонт <span>погрузчиков</span></h1>
+        <p class="page-subtitle">Выезд в день обращения. Гарантия на ремонт до 6 месяцев. Склад запчастей 10 000+ позиций. Работаем с CHL, Heli, Hangcha, Lonking, Wecan.</p>
+    </div>
+</section>
+
+<section class="service-hero">
+    <div class="service-hero-container">
+        <div class="animate">
+            <h2>Сервис, который <span>не подводит</span></h2>
+            <p>Остановка погрузчика — это остановка вашего бизнеса. Мы понимаем это и работаем 24/7. Выезд в день обращения, ремонт на месте, запчасти в наличии.</p>
+            <div class="service-stats">
+                <div class="service-stat">
+                    <div class="service-stat-value">24/7</div>
+                    <div class="service-stat-label">Работаем круглосуточно</div>
+                </div>
+                <div class="service-stat">
+                    <div class="service-stat-value">15+</div>
+                    <div class="service-stat-label">Городов присутствия</div>
+                </div>
+                <div class="service-stat">
+                    <div class="service-stat-value">2 часа</div>
+                    <div class="service-stat-label">Среднее время выезда</div>
+                </div>
+                <div class="service-stat">
+                    <div class="service-stat-value">10 000+</div>
+                    <div class="service-stat-label">Позиций запчастей</div>
+                </div>
+            </div>
+            <a href="#" class="btn-primary btn-large" onclick="alert('Вызов мастера оформляется по телефону 8-800-123-45-67')">Вызвать мастера →</a>
+        </div>
+        <div class="service-image animate">🔧</div>
+    </div>
+</section>
+
+<section class="services-grid-section">
+    <div class="services-grid-container">
+        <div class="section-header">
+            <div class="section-label">Услуги</div>
+            <h2 class="section-title">Наши <span>услуги</span></h2>
+            <p class="section-subtitle">Полный спектр сервисного обслуживания вилочных погрузчиков.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate">
+                <div class="service-card-icon">🔧</div>
+                <div class="service-card-title">Текущий ремонт</div>
+                <div class="service-card-text">Диагностика и ремонт двигателя, трансмиссии, гидравлики, электрики. Гарантия 6 месяцев.</div>
+                <div class="service-card-price">от 5 000 ₽ <span>/ выезд</span></div>
+            </div>
+            <div class="service-card animate animate-delay-1">
+                <div class="service-card-icon">⚙️</div>
+                <div class="service-card-title">ТО и обслуживание</div>
+                <div class="service-card-text">Плановое ТО каждые 250 моточасов. Замена масел, фильтров, свечей, проверка узлов.</div>
+                <div class="service-card-price">от 8 500 ₽ <span>/ ТО</span></div>
+            </div>
+            <div class="service-card animate animate-delay-2">
+                <div class="service-card-icon">🔋</div>
+                <div class="service-card-title">Ремонт аккумуляторов</div>
+                <div class="service-card-text">Диагностика, обслуживание, ремонт тяговых аккумуляторных батарей. Подбор и замена.</div>
+                <div class="service-card-price">от 3 000 ₽ <span>/ диагностика</span></div>
+            </div>
+            <div class="service-card animate">
+                <div class="service-card-icon">🛞</div>
+                <div class="service-card-title">Шиномонтаж</div>
+                <div class="service-card-text">Замена и ремонт шин погрузчиков. Пневматические, цельнолитые, суперэластик. Балансировка.</div>
+                <div class="service-card-price">от 2 500 ₽ <span>/ шина</span></div>
+            </div>
+            <div class="service-card animate animate-delay-1">
+                <div class="service-card-icon">🎨</div>
+                <div class="service-card-title">Кузовной ремонт</div>
+                <div class="service-card-text">Восстановление рамы, ремонт мачты, покраска, замена стекол. Гарантия на сварку.</div>
+                <div class="service-card-price">от 15 000 ₽ <span>/ работа</span></div>
+            </div>
+            <div class="service-card animate animate-delay-2">
+                <div class="service-card-icon">📋</div>
+                <div class="service-card-title">Диагностика</div>
+                <div class="service-card-text">Компьютерная и визуальная диагностика. Выявление скрытых дефектов. Отчет с рекомендациями.</div>
+                <div class="service-card-price">от 3 500 ₽ <span>/ диагностика</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coverage-section">
+    <div class="coverage-container">
+        <div class="coverage-map animate">🗺️ Карта сервисных центров<br><br>Уфа | Москва | СПб | Екатеринбург<br>Казань | Нижний Новгород | Самара<br>Ростов | Краснодар | Челябинск<br>и другие города</div>
+        <div class="animate">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px;">
+                <div class="section-label">География</div>
+                <h2 class="section-title" style="text-align: left;">Где мы <span>работаем</span></h2>
+            </div>
+            <div class="coverage-cities">
+                <div class="coverage-city">
+                    <div class="coverage-city-icon">📍</div>
+                    <div class="coverage-city-info">
+                        <h4>Уфа — Главный сервисный центр</h4>
+                        <p>ул. Примерная, 1. Выезд по Башкортостану и соседним регионам</p>
+                    </div>
+                </div>
+                <div class="coverage-city">
+                    <div class="coverage-city-icon">📍</div>
+                    <div class="coverage-city-info">
+                        <h4>Москва и Московская область</h4>
+                        <p>15 км от МКАД. Выезд в день обращения по всей области</p>
+                    </div>
+                </div>
+                <div class="coverage-city">
+                    <div class="coverage-city-icon">📍</div>
+                    <div class="coverage-city-info">
+                        <h4>Санкт-Петербург и Ленинградская область</h4>
+                        <p>пр. Промышленный, 5. Выезд по СЗФО</p>
+                    </div>
+                </div>
+                <div class="coverage-city">
+                    <div class="coverage-city-icon">📍</div>
+                    <div class="coverage-city-info">
+                        <h4>Екатеринбург и Уральский ФО</h4>
+                        <p>ул. Техническая, 25. Покрытие всего Урала</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-container">
+        <h2>Вызовите мастера прямо сейчас</h2>
+        <p>Оставьте заявку — мастер выедет в день обращения. Или позвоните по бесплатному номеру 8-800-123-45-67</p>
+        <form class="cta-form" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="text" placeholder="Город и адрес">
+            <button type="submit">Вызвать мастера</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="footer-brand"><div class="footer-brand-icon">A</div><div class="footer-brand-text">АВАНГАРД <span>ТЕХНИКА</span></div></div>
+            <p class="footer-desc">Официальный дилер вилочных погрузчиков CHL, Heli, Hangcha, Lonking, Wecan. Прямые поставки с заводов. Гарантия до 3 лет.</p>
+        </div>
+        <div class="footer-col"><h4>Каталог</h4><ul><li><a href="catalog.html">Вилочные погрузчики</a></li><li><a href="catalog.html">Мини-погрузчики</a></li><li><a href="catalog.html">Электропогрузчики</a></li><li><a href="catalog.html">Штабелеры</a></li></ul></div>
+        <div class="footer-col"><h4>Услуги</h4><ul><li><a href="lizing.html">Лизинг</a></li><li><a href="trade-in.html">Trade-in</a></li><li><a href="service.html">Сервис</a></li><li><a href="arenda.html">Аренда</a></li></ul></div>
+        <div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О компании</a></li><li><a href="reviews.html">Отзывы</a></li><li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+        <div class="footer-col"><h4>Контакты</h4><a href="tel:88001234567" class="footer-phone">8-800-123-45-67</a><a href="mailto:info@avangard-teh.ru" class="footer-email">info@avangard-teh.ru</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 ООО "Авангард". Официальный дилер CHL, Heli, Hangcha, Lonking, Wecan.</p><div style="display: flex; gap: 30px;"><a href="#">Политика конфиденциальности</a><a href="#">Карта сайта</a></div></div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50); });
+const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } }); }, { threshold: 0.1 });
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+function handleSubmit(e) { e.preventDefault(); alert('Спасибо! Заявка на вызов мастера отправлена. Мастер свяжется с вами в течение 30 минут.'); }
+</script>
+
+</body>
+</html>
