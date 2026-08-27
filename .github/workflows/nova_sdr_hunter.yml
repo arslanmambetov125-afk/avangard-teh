@@ -1,6 +1,10 @@
 name: NOVA SDR Hunter
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nova_sdr_hunter.yml'
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
