@@ -1,33 +1,46 @@
 #!/usr/bin/env python3
 import json, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'data' / 'leads.json'
-UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.0'}
-QUERIES = [
-    '"вилочный погрузчик" закупка',
-    '"погрузчик 3 тонны" закупка',
-    'электропогрузчик закупка',
-    'штабелер закупка',
-    '"складская техника" закупка',
-    '"новый логистический центр" Россия',
-    '"строительство распределительного центра" Россия',
-    '"расширение склада" Россия',
-    '"новый складской комплекс" Россия',
-]
-PRODUCTS = ['вилочный погрузчик','электропогрузчик','погрузчик','штабелер','складская техника','гидравлическая тележка']
-DIRECT = ['закупка','тендер','поставка','аукцион','запрос предложений','запрос котировок']
-PREDICTIVE = ['строительство','строится','расширение','новый склад','логистический центр','распределительный центр','складской комплекс']
-NEGATIVE = ['беларус','казахстан','украин','одесс','минск','гомел']
+UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.1'}
 
-def fetch(url, timeout=25):
+DIRECT_QUERIES = [
+    '"вилочный погрузчик" закупка when:45d',
+    '"вилочные погрузчики" тендер when:45d',
+    '"погрузчик 3 т" закупка when:45d',
+    'электропогрузчик закупка when:45d',
+    'штабелер закупка тендер when:45d',
+    '"складская техника" закупка when:45d',
+    '"поставка вилочных погрузчиков" when:45d',
+    '"приобретение погрузчика" when:45d',
+]
+PREDICTIVE_QUERIES = [
+    '"строится логистический центр" Россия when:120d',
+    '"новый распределительный центр" Россия when:120d',
+    '"строительство складского комплекса" Россия when:120d',
+    '"расширение склада" Россия when:120d',
+    '"открытие логистического центра" Россия when:120d',
+    '"новый склад" производство Россия when:120d',
+]
+PRODUCTS = ['вилочный погрузчик','вилочные погрузчики','электропогрузчик','погрузчик','штабелер','складская техника','гидравлическая тележка']
+DIRECT = ['закупка','тендер','аукцион','запрос предложений','запрос котировок','приобретение','на поставку','планирует закупить','закупает']
+PREDICTIVE = ['строительство','строится','расширение','новый склад','логистический центр','распределительный центр','складской комплекс','открытие']
+NEGATIVE_GEO = ['беларус','казахстан','украин','одесс','минск','гомел']
+SUPPLIER_NEWS = ['презентует','презентовать','представила новый','представит новый','выпустил новый','модельный ряд','выставке','производитель погрузчиков','новинка рынка','обзор погрузчика','рейтинг лучших']
+NEGATIVE_EVENTS = ['пожар','сгорел','атака бпла','уничтожен','дтп','авария']
+
+def fetch(url, timeout=22):
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode('utf-8', 'ignore')
 
 def clean(s):
-    return re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',s or '')).strip()
+    s = re.sub(r'<[^>]+>',' ',s or '')
+    s = s.replace('&nbsp;',' ').replace('&amp;','&')
+    return re.sub(r'\s+',' ',s).strip()
 
 def parse_rss(xml):
     root = ET.fromstring(xml)
@@ -39,59 +52,92 @@ def parse_rss(xml):
         out.append({'title':t('title'),'url':t('link'),'desc':t('description'),'published':t('pubDate')})
     return out
 
-def score(title, desc, source):
-    text=(title+' '+desc).lower()
-    if any(x in text for x in NEGATIVE): return None
-    n=20; why=[]; typ='INFO'
-    product=next((p for p in PRODUCTS if p in text),'')
-    if any(x in text for x in DIRECT):
-        n+=38; typ='DIRECT'; why.append('прямой закупочный сигнал')
-    if any(x in text for x in PREDICTIVE):
-        n+=28; typ='PREDICTIVE' if typ!='DIRECT' else typ; why.append('событие перед возможной закупкой')
-    if product:
-        n+=26; why.append('целевой продукт: '+product)
-    elif typ=='DIRECT':
-        n-=12
-    if source=='etpgpb': n+=8
-    if re.search(r'202[0-4]', text): n-=25
-    n=max(0,min(100,n))
-    if n<52: return None
-    status='HOT' if n>=86 else 'HIGH' if n>=70 else 'WATCH'
-    return {'score':n,'status':status,'type':typ,'product':product,'why':' · '.join(why) or 'релевантный отраслевой сигнал'}
-
-def normalize_date(s):
+def parsed_date(s):
     if not s: return None
     try:
-        from email.utils import parsedate_to_datetime
-        return parsedate_to_datetime(s).astimezone(timezone.utc).isoformat()
+        return parsedate_to_datetime(s).astimezone(timezone.utc)
     except Exception:
-        return s
+        try: return datetime.fromisoformat(s.replace('Z','+00:00')).astimezone(timezone.utc)
+        except Exception: return None
+
+def age_days(s):
+    dt=parsed_date(s)
+    if not dt: return 9999
+    return max(0,(datetime.now(timezone.utc)-dt).total_seconds()/86400)
+
+def score(title, desc, source, mode, published):
+    text=(title+' '+desc).lower()
+    if any(x in text for x in NEGATIVE_GEO): return None
+    if any(x in text for x in NEGATIVE_EVENTS): return None
+    days=age_days(published)
+    max_age=45 if mode=='DIRECT' else 120
+    if days>max_age: return None
+
+    product=next((p for p in PRODUCTS if p in text),'')
+    has_direct=any(x in text for x in DIRECT)
+    has_predictive=any(x in text for x in PREDICTIVE)
+    supplier_news=any(x in text for x in SUPPLIER_NEWS)
+
+    if mode=='DIRECT':
+        if not has_direct or not product: return None
+        if supplier_news and not any(x in text for x in ['закупка','тендер','аукцион','заказчик','на поставку']): return None
+        n=72
+        why=['свежий прямой закупочный сигнал','целевой продукт: '+product]
+        typ='DIRECT'
+        if days<=7: n+=14; why.append('≤ 7 дней')
+        elif days<=21: n+=8; why.append('≤ 21 дня')
+        elif days<=45: n+=3
+        if source=='etpgpb': n+=8; why.append('закупочная площадка')
+    else:
+        if not has_predictive: return None
+        if supplier_news: return None
+        n=58
+        why=['свежее событие перед возможной закупкой']
+        typ='PREDICTIVE'
+        if product: n+=8; why.append('упомянута техника: '+product)
+        if any(x in text for x in ['строится','строительство','расширение']): n+=8
+        if any(x in text for x in ['логистический центр','распределительный центр','складской комплекс','новый склад']): n+=8
+        if days<=14: n+=8; why.append('≤ 14 дней')
+        elif days<=60: n+=4
+
+    n=max(0,min(100,n))
+    status='HOT' if n>=86 else 'HIGH' if n>=70 else 'WATCH'
+    return {'score':n,'status':status,'type':typ,'product':product,'why':' · '.join(why),'age_days':round(days,1)}
+
+def normalize_date(s):
+    dt=parsed_date(s)
+    return dt.isoformat() if dt else None
 
 def google_news():
     leads=[]
-    for q in QUERIES:
-        url='https://news.google.com/rss/search?q='+urllib.parse.quote(q)+'&hl=ru&gl=RU&ceid=RU:ru'
-        xml=fetch(url)
-        for i in parse_rss(xml):
-            sc=score(i['title'],i['desc'],'google_news')
-            if not sc: continue
-            leads.append({
-                'source':'google_news','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),
-                'region':'Россия','summary':clean(i['desc'])[:600],**sc
-            })
+    for mode,queries in [('DIRECT',DIRECT_QUERIES),('PREDICTIVE',PREDICTIVE_QUERIES)]:
+        for q in queries:
+            url='https://news.google.com/rss/search?q='+urllib.parse.quote(q)+'&hl=ru&gl=RU&ceid=RU:ru'
+            xml=fetch(url)
+            for i in parse_rss(xml):
+                sc=score(i['title'],i['desc'],'google_news',mode,i['published'])
+                if not sc: continue
+                leads.append({
+                    'source':'google_news','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),
+                    'region':'Россия','summary':clean(i['desc'])[:600],**sc
+                })
     return leads
 
 def etpgpb():
     leads=[]
-    xml=fetch('https://etpgpb.ru/procedures.rss',35)
+    xml=fetch('https://etpgpb.ru/procedures.rss',18)
     for i in parse_rss(xml):
-        sc=score(i['title'],i['desc'],'etpgpb')
+        sc=score(i['title'],i['desc'],'etpgpb','DIRECT',i['published'])
         if not sc: continue
         leads.append({
             'source':'etpgpb','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),
             'region':'Россия','summary':clean(i['desc'])[:600],**sc
         })
     return leads
+
+def title_key(s):
+    s=re.sub(r'[^a-zа-я0-9 ]+',' ',(s or '').lower())
+    return ' '.join(s.split())[:180]
 
 def main():
     sources={}; all_leads=[]
@@ -102,10 +148,10 @@ def main():
             sources[name]={'ok':False,'error':str(e)[:240]}
     dedup={}
     for x in all_leads:
-        key=x.get('url') or x.get('title')
+        key=title_key(x.get('title')) or x.get('url')
         if key not in dedup or x['score']>dedup[key]['score']:
             dedup[key]=x
-    leads=sorted(dedup.values(),key=lambda x:x['score'],reverse=True)[:120]
+    leads=sorted(dedup.values(),key=lambda x:(x['score'],-x.get('age_days',9999)),reverse=True)[:120]
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps({'generated_at':datetime.now(timezone.utc).isoformat(),'sources':sources,'leads':leads},ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({'found':len(leads),'sources':sources},ensure_ascii=False))
