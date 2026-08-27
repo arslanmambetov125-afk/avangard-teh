@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOVA SDR Cloud</title>
+<style>
+:root{--bg:#081019;--panel:#101a26;--line:#223144;--txt:#f4f7fb;--muted:#8fa2b8;--accent:#78aaff;--hot:#ff6b6b;--high:#ffbd59;--watch:#70d6a7}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#071019,#0b111a);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:rgba(8,16,25,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:20px 5vw;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:22px;font-weight:900;letter-spacing:.02em}.sub{font-size:13px;color:var(--muted);margin-top:4px}.wrap{max-width:1220px;margin:auto;padding:24px 5vw 60px}
+.status{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:8px 11px;border:1px solid var(--line);background:var(--panel);border-radius:999px;font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 28px}.kpi,.card{background:var(--panel);border:1px solid var(--line);border-radius:15px}.kpi{padding:17px}.kpi b{display:block;font-size:31px}.kpi span{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0}.btn{border:1px solid var(--line);background:#172334;color:#fff;padding:10px 13px;border-radius:10px;font-weight:800;cursor:pointer}.btn.primary{background:var(--accent);color:#07101d;border-color:transparent}
+.card{padding:12px 17px}.lead{display:grid;grid-template-columns:78px 1fr 150px 150px;gap:15px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}.lead:first-child{border-top:0}.score{font-size:30px;font-weight:950}.score.hot{color:var(--hot)}.score.high{color:var(--high)}.score.watch{color:var(--watch)}.title{font-weight:850;line-height:1.3}.meta,.why{font-size:12px;color:var(--muted);margin-top:6px}.why{color:#bbc8d7}.source{color:var(--accent);text-decoration:none;font-size:13px;font-weight:800}.empty{text-align:center;color:var(--muted);padding:42px 10px}.err{padding:14px;border:1px solid #5c3340;background:#28151c;border-radius:12px;color:#ffc5d0;margin:14px 0;display:none}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.lead{grid-template-columns:70px 1fr}.lead>div:nth-child(3),.lead>div:nth-child(4){grid-column:2}.toolbar{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">NOVA SDR CLOUD</div><div class="sub">Автономный поиск B2B-сигналов · Авангард · Вся Россия</div></div><button class="btn primary" onclick="load()">↻ Обновить</button></header>
+<main class="wrap">
+<div class="status"><span class="pill">☁️ GitHub Cloud</span><span class="pill">🤖 Hunter: GitHub Actions</span><span class="pill" id="last">Последний запуск: —</span></div>
+<div id="err" class="err"></div>
+<div class="grid"><div class="kpi"><b id="hot">0</b><span>HOT / звонить сегодня</span></div><div class="kpi"><b id="high">0</b><span>HIGH / исследовать</span></div><div class="kpi"><b id="watch">0</b><span>WATCH / наблюдать</span></div><div class="kpi"><b id="all">0</b><span>всего сигналов</span></div></div>
+<div class="toolbar"><div><h2 style="margin:0">Кому звонить сегодня</h2><div class="sub">Сильнейшие и самые свежие сигналы — первыми</div></div><div class="sub" id="health"></div></div>
+<div class="card" id="list"><div class="empty">Загрузка данных Hunter…</div></div>
+</main>
+<script>
+const DATA='./data/leads.json';
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function fmtDate(s){if(!s)return 'дата не указана';try{return new Date(s).toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}catch{return s}}
+function render(d){const ls=(d.leads||[]).slice().sort((a,b)=>(b.score||0)-(a.score||0));document.getElementById('last').textContent='Последний запуск: '+fmtDate(d.generated_at);document.getElementById('hot').textContent=ls.filter(x=>x.status==='HOT').length;document.getElementById('high').textContent=ls.filter(x=>x.status==='HIGH').length;document.getElementById('watch').textContent=ls.filter(x=>x.status==='WATCH').length;document.getElementById('all').textContent=ls.length;const hs=Object.entries(d.sources||{}).map(([k,v])=>k+': '+(v.ok?'OK':'ERROR')).join(' · ');document.getElementById('health').textContent=hs;const box=document.getElementById('list');if(!ls.length){box.innerHTML='<div class="empty">Hunter пока не сохранил релевантные сигналы. Облачный поиск запускается автоматически.</div>';return}box.innerHTML='';ls.forEach(x=>{const row=document.createElement('div');row.className='lead';const cls=x.status==='HOT'?'hot':x.status==='HIGH'?'high':'watch';row.innerHTML='<div><div class="score '+cls+'">'+esc(x.score)+'</div><div class="meta">'+esc(x.status)+'</div></div><div><div class="title">'+esc(x.title||'Сигнал')+'</div><div class="meta">'+esc(x.source)+' · '+esc(x.region||'Россия')+' · '+esc(fmtDate(x.published))+'</div><div class="why">'+esc(x.why||'')+'</div></div><div><div class="meta">Продукт</div>'+esc(x.product||'уточнить')+'</div><div><a class="source" href="'+esc(x.url||'#')+'" target="_blank" rel="noopener">Первоисточник ↗</a></div>';box.appendChild(row)})}
+async function load(){const err=document.getElementById('err');err.style.display='none';try{const r=await fetch(DATA+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);render(await r.json())}catch(e){err.textContent='Не удалось загрузить данные Hunter: '+e;err.style.display='block';document.getElementById('list').innerHTML='<div class="empty">Данные временно недоступны.</div>'}}
+load();setInterval(load,60000);
+</script>
+</body></html>
