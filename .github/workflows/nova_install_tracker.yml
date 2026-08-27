@@ -1,0 +1,32 @@
+name: NOVA Install Intent Tracker
+
+on:
+  push:
+    paths:
+      - '.github/workflows/nova_install_tracker.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install tracker
+        run: python3 nova-sdr/install_tracker.py
+      - name: Commit tracker installation
+        run: |
+          git config user.name "NOVA SDR Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add catalog.html product-chl-cpcd15.html lizing.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "NOVA: enable intent tracking on high-intent pages"
+          git push
