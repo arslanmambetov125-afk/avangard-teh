@@ -1,0 +1,33 @@
+name: NOVA SDR Hunter
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run NOVA Hunter
+        run: python3 nova-sdr/hunter.py
+
+      - name: Commit fresh leads
+        run: |
+          git config user.name "NOVA SDR Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add nova-sdr/data/leads.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "NOVA: refresh SDR leads"
+          git push
