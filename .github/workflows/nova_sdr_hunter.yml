@@ -35,3 +35,5 @@ jobs:
           fi
           git commit -m "NOVA: refresh SDR leads"
           git push
+
+# force-run marker: freshness-v2
