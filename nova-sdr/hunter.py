@@ -5,7 +5,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'data' / 'leads.json'
-UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.1'}
+UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.2'}
 
 DIRECT_QUERIES = [
     '"вилочный погрузчик" закупка when:45d',
@@ -22,15 +22,17 @@ PREDICTIVE_QUERIES = [
     '"новый распределительный центр" Россия when:120d',
     '"строительство складского комплекса" Россия when:120d',
     '"расширение склада" Россия when:120d',
-    '"открытие логистического центра" Россия when:120d',
+    '"разрешение на строительство склада" Россия when:120d',
     '"новый склад" производство Россия when:120d',
 ]
 PRODUCTS = ['вилочный погрузчик','вилочные погрузчики','электропогрузчик','погрузчик','штабелер','складская техника','гидравлическая тележка']
 DIRECT = ['закупка','тендер','аукцион','запрос предложений','запрос котировок','приобретение','на поставку','планирует закупить','закупает']
-PREDICTIVE = ['строительство','строится','расширение','новый склад','логистический центр','распределительный центр','складской комплекс','открытие']
-NEGATIVE_GEO = ['беларус','казахстан','украин','одесс','минск','гомел']
+FACILITY = ['логистический центр','распределительный центр','складской комплекс','складской центр','новый склад','строительство склада','склада wildberries','склада ozon','складов','склада']
+FUTURE_STAGE = ['разрешение на строительство','построят','планирует построить','строится','строительство','начал строительство','начали строительство','финансирование','предоставит','инвестирует','расширение','реконструкция']
+LATE_STAGE = ['открыл','открыт','введен в эксплуатацию','введён в эксплуатацию','построил','запущен','начал работу','заработал']
+NEGATIVE_GEO = ['беларус','казахстан','украин','одесс','минск','гомел','кыргыз','киргиз','сиан']
 SUPPLIER_NEWS = ['презентует','презентовать','представила новый','представит новый','выпустил новый','модельный ряд','выставке','производитель погрузчиков','новинка рынка','обзор погрузчика','рейтинг лучших']
-NEGATIVE_EVENTS = ['пожар','сгорел','атака бпла','уничтожен','дтп','авария']
+NEGATIVE_EVENTS = ['пожар','сгор','атака бпла','уничтож','обстрел','удар по складу','дтп','авари']
 
 def fetch(url, timeout=22):
     req = urllib.request.Request(url, headers=UA)
@@ -75,7 +77,7 @@ def score(title, desc, source, mode, published):
 
     product=next((p for p in PRODUCTS if p in text),'')
     has_direct=any(x in text for x in DIRECT)
-    has_predictive=any(x in text for x in PREDICTIVE)
+    has_facility=any(x in text for x in FACILITY)
     supplier_news=any(x in text for x in SUPPLIER_NEWS)
 
     if mode=='DIRECT':
@@ -89,18 +91,24 @@ def score(title, desc, source, mode, published):
         elif days<=45: n+=3
         if source=='etpgpb': n+=8; why.append('закупочная площадка')
     else:
-        if not has_predictive: return None
+        if not has_facility: return None
         if supplier_news: return None
-        n=58
-        why=['свежее событие перед возможной закупкой']
+        future=any(x in text for x in FUTURE_STAGE)
+        late=any(x in text for x in LATE_STAGE)
+        if not future and not late: return None
+        n=56
+        why=['свежее событие по складскому/логистическому объекту']
         typ='PREDICTIVE'
-        if product: n+=8; why.append('упомянута техника: '+product)
-        if any(x in text for x in ['строится','строительство','расширение']): n+=8
-        if any(x in text for x in ['логистический центр','распределительный центр','складской комплекс','новый склад']): n+=8
+        if future:
+            n+=14; why.append('объект ещё в стадии строительства/развития')
+        if late:
+            n-=16; why.append('объект уже открыт/построен — поздний сигнал')
+        if product: n+=6; why.append('упомянута техника: '+product)
         if days<=14: n+=8; why.append('≤ 14 дней')
         elif days<=60: n+=4
 
     n=max(0,min(100,n))
+    if n<52: return None
     status='HOT' if n>=86 else 'HIGH' if n>=70 else 'WATCH'
     return {'score':n,'status':status,'type':typ,'product':product,'why':' · '.join(why),'age_days':round(days,1)}
 
