@@ -5,7 +5,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'data' / 'leads.json'
-UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.2'}
+UA = {'User-Agent':'Mozilla/5.0 NOVA-SDR-GitHub/1.3'}
 
 DIRECT_QUERIES = [
     '"вилочный погрузчик" закупка when:45d',
@@ -17,6 +17,7 @@ DIRECT_QUERIES = [
     '"поставка вилочных погрузчиков" when:45d',
     '"приобретение погрузчика" when:45d',
 ]
+EIS_QUERIES = ['вилочный погрузчик','электропогрузчик','штабелер','складская техника','погрузчик']
 PREDICTIVE_QUERIES = [
     '"строится логистический центр" Россия when:120d',
     '"новый распределительный центр" Россия when:120d',
@@ -26,7 +27,7 @@ PREDICTIVE_QUERIES = [
     '"новый склад" производство Россия when:120d',
 ]
 PRODUCTS = ['вилочный погрузчик','вилочные погрузчики','электропогрузчик','погрузчик','штабелер','складская техника','гидравлическая тележка']
-DIRECT = ['закупка','тендер','аукцион','запрос предложений','запрос котировок','приобретение','на поставку','планирует закупить','закупает']
+DIRECT = ['закупка','тендер','аукцион','запрос предложений','запрос котировок','приобретение','на поставку','планирует закупить','закупает','поставка']
 FACILITY = ['логистический центр','распределительный центр','складской комплекс','складской центр','новый склад','строительство склада','склада wildberries','склада ozon','складов','склада']
 FUTURE_STAGE = ['разрешение на строительство','построят','планирует построить','строится','строительство','начал строительство','начали строительство','финансирование','предоставит','инвестирует','расширение','реконструкция']
 LATE_STAGE = ['открыл','открыт','введен в эксплуатацию','введён в эксплуатацию','построил','запущен','начал работу','заработал']
@@ -56,8 +57,7 @@ def parse_rss(xml):
 
 def parsed_date(s):
     if not s: return None
-    try:
-        return parsedate_to_datetime(s).astimezone(timezone.utc)
+    try: return parsedate_to_datetime(s).astimezone(timezone.utc)
     except Exception:
         try: return datetime.fromisoformat(s.replace('Z','+00:00')).astimezone(timezone.utc)
         except Exception: return None
@@ -81,14 +81,17 @@ def score(title, desc, source, mode, published):
     supplier_news=any(x in text for x in SUPPLIER_NEWS)
 
     if mode=='DIRECT':
-        if not has_direct or not product: return None
-        if supplier_news and not any(x in text for x in ['закупка','тендер','аукцион','заказчик','на поставку']): return None
+        # For official procurement feeds the query itself is evidence of direct intent.
+        if source not in ('eis','etpgpb') and (not has_direct or not product): return None
+        if source in ('eis','etpgpb') and not product: return None
+        if supplier_news and source not in ('eis','etpgpb'): return None
         n=72
         why=['свежий прямой закупочный сигнал','целевой продукт: '+product]
         typ='DIRECT'
         if days<=7: n+=14; why.append('≤ 7 дней')
         elif days<=21: n+=8; why.append('≤ 21 дня')
         elif days<=45: n+=3
+        if source=='eis': n+=10; why.append('официальная ЕИС')
         if source=='etpgpb': n+=8; why.append('закупочная площадка')
     else:
         if not has_facility: return None
@@ -99,10 +102,8 @@ def score(title, desc, source, mode, published):
         n=56
         why=['свежее событие по складскому/логистическому объекту']
         typ='PREDICTIVE'
-        if future:
-            n+=14; why.append('объект ещё в стадии строительства/развития')
-        if late:
-            n-=16; why.append('объект уже открыт/построен — поздний сигнал')
+        if future: n+=14; why.append('объект ещё в стадии строительства/развития')
+        if late: n-=16; why.append('объект уже открыт/построен — поздний сигнал')
         if product: n+=6; why.append('упомянута техника: '+product)
         if days<=14: n+=8; why.append('≤ 14 дней')
         elif days<=60: n+=4
@@ -125,10 +126,24 @@ def google_news():
             for i in parse_rss(xml):
                 sc=score(i['title'],i['desc'],'google_news',mode,i['published'])
                 if not sc: continue
-                leads.append({
-                    'source':'google_news','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),
-                    'region':'Россия','summary':clean(i['desc'])[:600],**sc
-                })
+                leads.append({'source':'google_news','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),'region':'Россия','summary':clean(i['desc'])[:600],**sc})
+    return leads
+
+def eis():
+    leads=[]
+    base='https://zakupki.gov.ru/epz/order/extendedsearch/rss.html?'
+    for q in EIS_QUERIES:
+        params={
+            'searchString':q,'morphology':'on','pageNumber':'1','sortDirection':'false',
+            'recordsPerPage':'_50','showLotsInfoHidden':'false','sortBy':'UPDATE_DATE',
+            'fz44':'on','fz223':'on','af':'on','ca':'on','pc':'on','pa':'on','currencyIdGeneral':'-1'
+        }
+        xml=fetch(base+urllib.parse.urlencode(params),22)
+        for i in parse_rss(xml):
+            # EIS titles/descriptions can be terse; append the query product to improve matching.
+            sc=score(i['title']+' '+q,i['desc'],'eis','DIRECT',i['published'])
+            if not sc: continue
+            leads.append({'source':'eis','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),'region':'Россия','summary':clean(i['desc'])[:600],**sc})
     return leads
 
 def etpgpb():
@@ -137,10 +152,7 @@ def etpgpb():
     for i in parse_rss(xml):
         sc=score(i['title'],i['desc'],'etpgpb','DIRECT',i['published'])
         if not sc: continue
-        leads.append({
-            'source':'etpgpb','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),
-            'region':'Россия','summary':clean(i['desc'])[:600],**sc
-        })
+        leads.append({'source':'etpgpb','url':i['url'],'title':i['title'],'published':normalize_date(i['published']),'region':'Россия','summary':clean(i['desc'])[:600],**sc})
     return leads
 
 def title_key(s):
@@ -149,7 +161,7 @@ def title_key(s):
 
 def main():
     sources={}; all_leads=[]
-    for name,fn in [('Google News',google_news),('ЭТП ГПБ',etpgpb)]:
+    for name,fn in [('ЕИС',eis),('Google News',google_news),('ЭТП ГПБ',etpgpb)]:
         try:
             x=fn(); sources[name]={'ok':True,'found':len(x)}; all_leads.extend(x)
         except Exception as e:
@@ -164,5 +176,4 @@ def main():
     OUT.write_text(json.dumps({'generated_at':datetime.now(timezone.utc).isoformat(),'sources':sources,'leads':leads},ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({'found':len(leads),'sources':sources},ensure_ascii=False))
 
-if __name__=='__main__':
-    main()
+if __name__=='__main__': main()
