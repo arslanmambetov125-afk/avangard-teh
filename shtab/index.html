@@ -1,1 +1,207 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>Штаб 2.0</title><style>:root{--bg:#07090d;--p:#0d121a;--line:#222d3d;--text:#f5f7fb;--muted:#8d9bad;--good:#77e2a8;--warn:#f0c36d;--accent:#9fb5ff}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 12% 0,#182238 0,#090c12 34%,#050609 80%);color:var(--text);font:14px/1.45 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}.hidden{display:none!important}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{max-width:1450px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.brand{display:flex;gap:12px;align-items:center}.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#e5ebff,#849fff);color:#08101f;font-weight:900}.brand h1{margin:0;font-size:20px}.sub{color:var(--muted);font-size:11px}.actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid var(--line);background:#111824;color:var(--text);padding:10px 13px;border-radius:12px}.btn.primary{background:linear-gradient(135deg,#dbe4ff,#91a9ff);color:#0b1322;border:0;font-weight:800}.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px}.hero,.card,.project{border:1px solid var(--line);background:linear-gradient(145deg,#101722e8,#0a0e15e8);border-radius:22px}.hero{padding:23px;margin-bottom:16px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:800}.hero h2{font-size:34px;line-height:1.02;letter-spacing:-.055em;margin:8px 0 9px}.hero p{color:var(--muted);margin:0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.metric{border:1px solid #1c2635;background:#080c12b8;border-radius:16px;padding:14px}.metric b{display:block;font-size:27px}.metric span{font-size:11px;color:var(--muted)}.section-title{display:flex;justify-content:space-between;margin:17px 2px 10px}.section-title h3{margin:0}.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.project{padding:16px;cursor:pointer}.project.selected{border-color:#7d97e9}.prtop{display:flex;justify-content:space-between;gap:10px}.prname{font-size:16px;font-weight:850}.badge{border:1px solid #304057;border-radius:999px;padding:4px 8px;font-size:10px;height:max-content}.badge.active{color:var(--good);border-color:#356148}.badge.waiting{color:var(--warn);border-color:#6b582c}.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:13px}.mini{background:#080c12;border-radius:11px;padding:8px}.mini b{display:block;font-size:17px}.mini span{font-size:9.5px;color:var(--muted)}.side{display:flex;flex-direction:column;gap:14px}.card{padding:16px}.card h3{margin:0 0 11px}.task{display:flex;gap:9px;padding:10px 0;border-top:1px solid #1a2331}.task:first-of-type{border-top:0}.dot{width:8px;height:8px;border-radius:50%;background:var(--warn);margin-top:6px}.task b,.task small{display:block}.task small{color:var(--muted)}.task .done{margin-left:auto;border:0;background:#142118;color:var(--good);border-radius:9px;padding:5px 8px}.integration{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-top:1px solid #1a2331}.integration:first-of-type{border-top:0}.provider{display:flex;gap:9px;align-items:center}.provider>div{display:flex;align-items:baseline;gap:7px;min-width:0}.provider small{color:var(--muted);white-space:nowrap}.light{width:8px;height:8px;border-radius:50%;background:var(--good)}.light.warn{background:var(--warn)}.field{width:100%;padding:11px 12px;border-radius:11px;border:1px solid var(--line);background:#080c12;color:var(--text)}.form{display:grid;gap:8px}.msg,.detail{font-size:11px;color:var(--muted)}.quicklinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.quicklinks a{padding:7px 9px;border:1px solid var(--line);border-radius:10px}.login{min-height:100vh;display:grid;place-items:center;padding:20px}.loginbox{width:min(430px,100%);padding:27px;border-radius:26px;border:1px solid var(--line);background:#0c1119ed}.owner{padding:11px 12px;border-radius:11px;background:#080c12;border:1px solid var(--line);margin:12px 0}.footer{color:#647285;font-size:10px;padding:16px 2px}@media(max-width:1000px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.wrap{padding:13px}.projects{grid-template-columns:1fr}}</style></head><body><section id="login" class="login"><div class="loginbox"><div class="logo">S2</div><div class="eyebrow" style="margin-top:18px">Private founder workspace</div><h2>Штаб 2.0</h2><p class="sub">Проекты, лиды, CRM и задачи в одном рабочем окне.</p><div class="owner">arslan.mambetov125@gmail.com</div><button id="magic" class="btn primary" style="width:100%">Получить ссылку для входа</button><div id="authmsg" class="msg" style="margin-top:9px"></div></div></section><div id="app" class="wrap hidden"><header class="top"><div class="brand"><div class="logo">S2</div><div><h1>Штаб 2.0</h1><span class="sub">live operations center</span></div></div><div class="actions"><span id="userEmail" class="sub"></span><button id="refresh" class="btn">Обновить</button><button id="logout" class="btn">Выйти</button></div></header><div class="layout"><main><section class="hero"><div class="eyebrow">Founder control panel</div><h2>Деньги → клиент → выполненное действие.</h2><p>Проекты, лиды, ЛПР, сделки, задачи и состояние интеграций.</p><div class="metrics"><div class="metric"><b id="mProjects">—</b><span>активных проектов</span></div><div class="metric"><b id="mCompanies">—</b><span>компаний в CRM</span></div><div class="metric"><b id="mContacts">—</b><span>ЛПР</span></div><div class="metric"><b id="mTasks">—</b><span>нужно действий</span></div></div></section><div class="section-title"><h3>Проекты</h3><span id="lastSync" class="sub">синхронизация —</span></div><section id="projects" class="projects"></section></main><aside class="side"><section class="card"><h3>Сейчас / следующий шаг</h3><div id="tasks"></div></section><section class="card"><h3>Интеграции</h3><div id="integrations"></div></section><section class="card"><h3>Быстрая задача</h3><div class="form"><select id="taskProject" class="field"></select><input id="taskTitle" class="field" placeholder="Например: позвонить клиенту"><select id="taskPriority" class="field"><option value="1">P1 — критично</option><option value="2">P2 — важно</option><option value="3" selected>P3 — обычно</option></select><button id="addTask" class="btn primary">Добавить</button><div id="taskmsg" class="msg"></div></div></section><section class="card"><h3>Выбранный проект</h3><div id="projectDetail" class="detail">Выбери проект.</div></section></aside></div><div class="footer">Сырые телефоны, email и payload CRM наружу не выводятся.</div></div><script type="module">import{createClient}from'https://esm.sh/@supabase/supabase-js@2';const U='https://vnpkczboxrhscplxivvx.supabase.co',K='sb_publishable_Giap9iC_aWfhoHN8n9oLJg_DpKYQSGu',O='arslan.mambetov125@gmail.com',sb=createClient(U,K),$=id=>document.getElementById(id);let st={projects:[],crmTasks:[],refs:[],syncs:[],work:[],selected:null};const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])),fmt=v=>v?new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(v)):'—',sl=s=>({active:'активен',waiting:'ожидание',paused:'пауза',done:'готово',archived:'архив'})[s]||s||'—';async function boot(){const{data}=await sb.auth.getSession();if(data.session){if((data.session.user.email||'').toLowerCase()!==O){await sb.auth.signOut();return}$('login').classList.add('hidden');$('app').classList.remove('hidden');$('userEmail').textContent=data.session.user.email;load()}}$('magic').onclick=async()=>{const{error}=await sb.auth.signInWithOtp({email:O,options:{emailRedirectTo:location.origin+location.pathname,shouldCreateUser:true}});$('authmsg').textContent=error?error.message:'Ссылка отправлена на email.'};$('logout').onclick=async()=>{await sb.auth.signOut();location.reload()};$('refresh').onclick=load;async function load(){const[p,t,r,s,w]=await Promise.all([sb.from('project_dashboard_v1').select('*').order('priority',{ascending:true}),sb.from('external_entities').select('project_id,display_name,status,external_url').eq('entity_type','task'),sb.from('integration_refs').select('project_id,provider,external_url'),sb.from('sync_runs').select('provider,status,started_at,finished_at').order('started_at',{ascending:false}).limit(20),sb.from('work_items').select('id,project_id,title,status,priority').neq('status','done').neq('status','cancelled').order('priority',{ascending:true}).limit(40)]);if([p,t,r,s,w].some(x=>x.error)){return}st.projects=p.data||[];st.crmTasks=(t.data||[]).filter(x=>x.status!=='COMPLETED');st.refs=r.data||[];st.syncs=s.data||[];st.work=w.data||[];if(!st.selected&&st.projects.length)st.selected=st.projects[0].id;render()}function render(){$('mProjects').textContent=st.projects.filter(p=>p.status==='active').length;$('mCompanies').textContent=st.projects.reduce((a,p)=>a+Number(p.hubspot_companies||0),0);$('mContacts').textContent=st.projects.reduce((a,p)=>a+Number(p.hubspot_contacts||0),0);$('mTasks').textContent=st.crmTasks.length+st.work.length;const d=st.syncs.map(x=>x.finished_at||x.started_at).filter(Boolean).sort();$('lastSync').textContent='синхронизация '+(d.length?fmt(d.at(-1)):'—');$('projects').innerHTML=st.projects.map(p=>`<article class="project ${p.id===st.selected?'selected':''}" data-id="${p.id}"><div class="prtop"><div><div class="prname">${safe(p.name)}</div><div class="sub">P${p.priority} · ${safe(p.slug)}</div></div><span class="badge ${p.status}">${safe(sl(p.status))}</span></div><div class="minirow"><div class="mini"><b>${p.hubspot_companies||0}</b><span>компании</span></div><div class="mini"><b>${p.hubspot_contacts||0}</b><span>ЛПР</span></div><div class="mini"><b>${p.hubspot_deals||0}</b><span>сделки</span></div><div class="mini"><b>${p.open_crm_tasks||0}</b><span>CRM задачи</span></div></div></article>`).join('');document.querySelectorAll('.project').forEach(e=>e.onclick=()=>{st.selected=e.dataset.id;render()});const all=st.crmTasks.map(x=>({title:x.display_name,source:'HubSpot',url:x.external_url,pid:x.project_id})).concat(st.work.map(x=>({id:x.id,title:x.title,source:'Штаб',pid:x.project_id,priority:x.priority}))).slice(0,10);$('tasks').innerHTML=all.length?all.map(x=>`<div class="task"><span class="dot"></span><div>${x.url?`<a target="_blank" href="${safe(x.url)}">`:''}<b>${safe(x.title)}</b><small>${safe(x.source)} · ${safe((st.projects.find(p=>p.id===x.pid)||{}).name||'без проекта')}</small>${x.url?'</a>':''}</div>${x.id?`<button class="done" data-done="${x.id}">✓</button>`:''}</div>`).join(''):'<div class="sub">Открытых действий нет.</div>';document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{await sb.from('work_items').update({status:'done'}).eq('id',b.dataset.done);load()});$('integrations').innerHTML=['hubspot','apollo'].map(pr=>{const z=st.syncs.find(x=>x.provider===pr),g=z&&z.status==='success';return`<div class="integration"><div class="provider"><span class="light ${g?'':'warn'}"></span><div><b>${pr==='hubspot'?'HubSpot':'Apollo'}</b><small>${z?fmt(z.finished_at||z.started_at):'нет запуска'}</small></div></div><span class="badge ${g?'active':'waiting'}">${z?z.status:'ожидание'}</span></div>`}).join('')+`<div class="integration"><div class="provider"><span class="light"></span><b>Supabase</b></div><span class="badge active">online</span></div>`;$('taskProject').innerHTML=st.projects.map(p=>`<option value="${p.id}">${safe(p.name)}</option>`).join('');const p=st.projects.find(x=>x.id===st.selected);if(p){const refs=st.refs.filter(x=>x.project_id===p.id&&x.external_url);$('projectDetail').innerHTML=`<b style="color:var(--text);font-size:17px">${safe(p.name)}</b><div style="margin-top:6px">Apollo: ${p.apollo_accounts||0} компаний · ${p.apollo_contacts||0} ЛПР · ${p.apollo_lists||0} списков</div><div class="quicklinks">${refs.map(r=>`<a target="_blank" href="${safe(r.external_url)}">${safe(r.provider)}</a>`).join('')}</div>`}}$('addTask').onclick=async()=>{const title=$('taskTitle').value.trim();if(!title)return;const{error}=await sb.from('work_items').insert({project_id:$('taskProject').value,title,status:'todo',priority:Number($('taskPriority').value),source:'shtab-ui'});$('taskmsg').textContent=error?error.message:'Добавлено';if(!error){$('taskTitle').value='';load()}};sb.auth.onAuthStateChange((_e,s)=>{if(s)boot()});boot();setInterval(()=>{if(!$('app').classList.contains('hidden'))load()},60000)</script></body></html>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="theme-color" content="#070a10" />
+    <title>Штаб 2.0 — операционный центр</title>
+    <link rel="preconnect" href="https://esm.sh" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section id="login" class="login-screen" aria-labelledby="login-title">
+      <div class="login-ambient login-ambient-one"></div>
+      <div class="login-ambient login-ambient-two"></div>
+      <div class="login-shell">
+        <div class="login-story">
+          <div class="brand brand-large">
+            <span class="brand-mark">S2</span>
+            <span>
+              <strong>Штаб 2.0</strong>
+              <small>Founder operating system</small>
+            </span>
+          </div>
+          <p class="eyebrow">Private workspace</p>
+          <h1 id="login-title">От решения —<br />к выполненному действию.</h1>
+          <p class="login-lead">
+            Проекты, продажи, задачи и интеграции в одном защищённом
+            операционном контуре.
+          </p>
+          <div class="login-proof">
+            <span><i></i> Supabase защищает данные</span>
+            <span><i></i> Доступ только владельцу</span>
+          </div>
+        </div>
+
+        <div class="login-card panel">
+          <span class="login-card-icon">↗</span>
+          <p class="eyebrow">Безопасный вход</p>
+          <h2>Добро пожаловать</h2>
+          <p class="muted">
+            Мы отправим одноразовую ссылку на подтверждённый адрес владельца.
+          </p>
+          <div class="owner-email">arslan.mambetov125@gmail.com</div>
+          <button id="magic" class="button button-primary button-wide">
+            Получить ссылку для входа
+          </button>
+          <p id="authmsg" class="form-message" role="status" aria-live="polite"></p>
+          <p class="login-footnote">Ссылка действует один раз и имеет ограниченный срок.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="app" class="app-shell hidden">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">S2</span>
+          <span>
+            <strong>Штаб 2.0</strong>
+            <small>Live operations center</small>
+          </span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Основная навигация">
+          <p class="nav-label">Управление</p>
+          <button class="nav-item active" data-view="overview">
+            <span class="nav-icon">⌂</span><span>Главная</span>
+          </button>
+          <button class="nav-item" data-view="projects">
+            <span class="nav-icon">◇</span><span>Проекты</span>
+          </button>
+          <button class="nav-item" data-view="tasks">
+            <span class="nav-icon">✓</span><span>Задачи</span>
+            <span id="navTaskCount" class="nav-count">0</span>
+          </button>
+          <button class="nav-item" data-view="sales">
+            <span class="nav-icon">↗</span><span>Продажи</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">Система</p>
+          <button class="nav-item" data-view="agents">
+            <span class="nav-icon">✦</span><span>AI-агенты</span>
+          </button>
+          <button class="nav-item" data-view="integrations">
+            <span class="nav-icon">⌁</span><span>Интеграции</span>
+          </button>
+          <button class="nav-item" data-view="activity">
+            <span class="nav-icon">◷</span><span>Журнал действий</span>
+          </button>
+          <button class="nav-item" data-view="settings">
+            <span class="nav-icon">⚙</span><span>Настройки</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="system-state">
+            <span id="systemDot" class="state-dot"></span>
+            <span>
+              <strong id="systemLabel">Система подключена</strong>
+              <small id="systemTime">Проверяем синхронизацию</small>
+            </span>
+          </div>
+          <button id="sidebarLogout" class="sidebar-logout">Выйти</button>
+        </div>
+      </aside>
+
+      <div id="sidebarScrim" class="sidebar-scrim"></div>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div class="topbar-title">
+            <button id="menuButton" class="icon-button menu-button" aria-label="Открыть меню">☰</button>
+            <div>
+              <p id="breadcrumb" class="breadcrumb">Операционный центр</p>
+              <h1 id="pageTitle">Главная</h1>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="global-search">
+              <span>⌕</span>
+              <input id="globalSearch" type="search" placeholder="Поиск по Штабу" autocomplete="off" />
+              <kbd>/</kbd>
+            </label>
+            <span id="syncPill" class="sync-pill"><i></i><span>Синхронизация</span></span>
+            <button id="refresh" class="icon-button" aria-label="Обновить данные" title="Обновить данные">↻</button>
+            <button id="newTaskTop" class="button button-primary">+ Новая задача</button>
+            <button id="profileButton" class="profile-button" aria-label="Профиль владельца">АМ</button>
+          </div>
+        </header>
+
+        <main id="view" class="view" tabindex="-1"></main>
+      </section>
+    </div>
+
+    <dialog id="taskDialog" class="modal">
+      <form id="taskForm" class="modal-card">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Рабочее действие</p>
+            <h2 id="taskDialogTitle">Новая задача</h2>
+          </div>
+          <button type="button" class="icon-button" data-close-modal aria-label="Закрыть">×</button>
+        </div>
+
+        <input id="taskId" type="hidden" />
+        <label class="field-label">
+          <span>Название</span>
+          <input id="taskTitle" class="field" required maxlength="180" placeholder="Что нужно сделать?" />
+        </label>
+        <div class="form-grid">
+          <label class="field-label">
+            <span>Проект</span>
+            <select id="taskProject" class="field" required></select>
+          </label>
+          <label class="field-label">
+            <span>Приоритет</span>
+            <select id="taskPriority" class="field">
+              <option value="1">P1 — критично</option>
+              <option value="2">P2 — важно</option>
+              <option value="3" selected>P3 — обычно</option>
+              <option value="4">P4 — низкий</option>
+              <option value="5">P5 — когда-нибудь</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label class="field-label">
+            <span>Статус</span>
+            <select id="taskStatus" class="field">
+              <option value="todo">К выполнению</option>
+              <option value="in_progress">В работе</option>
+              <option value="waiting">Ожидает</option>
+              <option value="done">Выполнено</option>
+              <option value="cancelled">Отменено</option>
+            </select>
+          </label>
+          <label class="field-label">
+            <span>Срок</span>
+            <input id="taskDue" class="field" type="datetime-local" />
+          </label>
+        </div>
+        <p id="taskFormMessage" class="form-message" role="status"></p>
+        <div class="modal-actions">
+          <button type="button" class="button button-ghost" data-close-modal>Отмена</button>
+          <button id="saveTask" type="submit" class="button button-primary">Сохранить задачу</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="confirmDialog" class="modal modal-small">
+      <div class="modal-card">
+        <span class="confirm-icon">!</span>
+        <h2 id="confirmTitle">Подтвердите действие</h2>
+        <p id="confirmText" class="muted"></p>
+        <div class="modal-actions">
+          <button id="confirmCancel" class="button button-ghost">Отмена</button>
+          <button id="confirmAction" class="button button-danger">Удалить</button>
+        </div>
+      </div>
+    </dialog>
+
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
