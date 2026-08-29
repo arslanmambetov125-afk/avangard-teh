@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T13:49:44.313273+00:00",
+  "generated_at": "2026-08-29T17:26:01.208722+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 18.3
+      "age_days": 18.4
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82Z1pHbThMRUZ6Nkl2ck1wZVRpV3pxUFFCZGxTVkpqYVpTTkFncmhSZTFDR2hiMW1HcVItczJoSHN1cl9yWHB6UTl5VU8?oc=5",
-      "title": "В Омске выдали разрешение на строительство склада для хранения металла - BK55.ru",
+      "title": "В Омске выдали разрешение на строительство склада для хранения металла - bk55.ru",
       "published": "2026-05-12T07:00:00+00:00",
       "region": "Россия",
-      "summary": "В Омске выдали разрешение на строительство склада для хранения металла BK55.ru",
+      "summary": "В Омске выдали разрешение на строительство склада для хранения металла bk55.ru",
       "score": 70,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 109.3
+      "age_days": 109.4
     }
   ]
 }
