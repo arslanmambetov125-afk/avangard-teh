@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T15:03:19.375994+00:00",
+  "generated_at": "2026-08-30T18:35:29.844919+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 2
+      "found": 4
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,6 +15,20 @@
     }
   },
   "leads": [
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
+      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - НИА «Нижний Новгород",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках НИА «Нижний Новгород",
+      "score": 74,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 19.5
+    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcXBNZWluVV9VeXBIQjNNbGlpaDJWd2hybVlpWEJrZ3RrcG8wZ0RjNGdIOFpiUDg5cmZUZGFzN1EzWWR1ZlZhampyQzNKRnNQWDN2Zm16M0EyUUQ3WDhndmFBWjZXU0JMalZyZ19pMnV6c2tVN29ueS05bzBrcFgxcW11cnVhLWlUQkJ0N2xxUkRvTFRtN29Zdzh0TEZVbk16ekNtUdIBqgFBVV95cUxNS1Q2ZFB2MVc4MW1ZYkd1V25rSEhWUENJdmItZjN4Zm04cjJST0J3VDdDODhyN0M3R2U4QldDZFM3WndhZkduQVprMW5jZzhmdHNiREhRaENMVUQ4cXNobU1CWjV5TGV5SU9qZEZsS0FhdXhQblp3RzMwR2xOWEJDUnJSQTVVZGQ0SnhnRDhWeVdqNndicF9COHNJZW9JTDBpazBHdHViS2JhZw?oc=5",
@@ -27,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 26.3
+      "age_days": 26.5
     },
     {
       "source": "google_news",
@@ -41,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 110.3
+      "age_days": 110.5
     }
   ]
 }
