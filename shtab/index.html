@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="theme-color" content="#070a10" />
+    <title>Штаб 2.1 — операционный центр</title>
+    <link rel="preconnect" href="https://esm.sh" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section id="login" class="login-screen" aria-labelledby="login-title">
+      <div class="login-ambient login-ambient-one"></div>
+      <div class="login-ambient login-ambient-two"></div>
+      <div class="login-shell">
+        <div class="login-story">
+          <div class="brand brand-large">
+            <span class="brand-mark">S2</span>
+            <span>
+              <strong>Штаб 2.1</strong>
+              <small>Founder operating system</small>
+            </span>
+          </div>
+          <p class="eyebrow">Private workspace</p>
+          <h1 id="login-title">От решения —<br />к выполненному действию.</h1>
+          <p class="login-lead">
+            Проекты, продажи, задачи и интеграции в одном защищённом
+            операционном контуре.
+          </p>
+          <div class="login-proof">
+            <span><i></i> Supabase защищает данные</span>
+            <span><i></i> Доступ только владельцу</span>
+          </div>
+        </div>
+
+        <div class="login-card panel">
+          <span class="login-card-icon">↗</span>
+          <p class="eyebrow">Безопасный вход</p>
+          <h2>Добро пожаловать</h2>
+          <p class="muted">
+            Мы отправим одноразовую ссылку на подтверждённый адрес владельца.
+          </p>
+          <div class="owner-email">arslan.mambetov125@gmail.com</div>
+          <button id="magic" class="button button-primary button-wide">
+            Получить ссылку для входа
+          </button>
+          <p id="authmsg" class="form-message" role="status" aria-live="polite"></p>
+          <p class="login-footnote">Ссылка действует один раз и имеет ограниченный срок.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="app" class="app-shell hidden">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">S2</span>
+          <span>
+            <strong>Штаб 2.1</strong>
+            <small>Live operations center</small>
+          </span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Основная навигация">
+          <p class="nav-label">Фокус</p>
+          <button class="nav-item active" data-view="overview">
+            <span class="nav-icon">⌂</span><span>Главная</span>
+          </button>
+          <button class="nav-item" data-view="projects">
+            <span class="nav-icon">◇</span><span>Проекты</span>
+          </button>
+          <button class="nav-item" data-view="tasks">
+            <span class="nav-icon">✓</span><span>Задачи</span>
+            <span id="navTaskCount" class="nav-count">0</span>
+          </button>
+          <button class="nav-item" data-view="inbox">
+            <span class="nav-icon">↓</span><span>Входящие</span>
+            <span id="navInboxCount" class="nav-count">0</span>
+          </button>
+          <button class="nav-item" data-view="waiting">
+            <span class="nav-icon">◷</span><span>Жду</span>
+            <span id="navWaitingCount" class="nav-count">0</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">Бизнес</p>
+          <button class="nav-item" data-view="sales">
+            <span class="nav-icon">↗</span><span>Продажи</span>
+          </button>
+          <button class="nav-item" data-view="finance">
+            <span class="nav-icon">₽</span><span>Деньги</span>
+          </button>
+          <button class="nav-item" data-view="goals">
+            <span class="nav-icon">◎</span><span>Цели и идеи</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">Система</p>
+          <button class="nav-item" data-view="agents">
+            <span class="nav-icon">✦</span><span>AI-агенты</span>
+          </button>
+          <button class="nav-item" data-view="integrations">
+            <span class="nav-icon">⌁</span><span>Интеграции</span>
+          </button>
+          <button class="nav-item" data-view="activity">
+            <span class="nav-icon">◷</span><span>Журнал действий</span>
+          </button>
+          <button class="nav-item" data-view="reviews">
+            <span class="nav-icon">▦</span><span>Weekly review</span>
+          </button>
+          <button class="nav-item" data-view="settings">
+            <span class="nav-icon">⚙</span><span>Настройки</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="system-state">
+            <span id="systemDot" class="state-dot"></span>
+            <span>
+              <strong id="systemLabel">Система подключена</strong>
+              <small id="systemTime">Проверяем синхронизацию</small>
+            </span>
+          </div>
+          <button id="sidebarLogout" class="sidebar-logout">Выйти</button>
+        </div>
+      </aside>
+
+      <div id="sidebarScrim" class="sidebar-scrim"></div>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div class="topbar-title">
+            <button id="menuButton" class="icon-button menu-button" aria-label="Открыть меню">☰</button>
+            <div>
+              <p id="breadcrumb" class="breadcrumb">Операционный центр</p>
+              <h1 id="pageTitle">Главная</h1>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="global-search">
+              <span>⌕</span>
+              <input id="globalSearch" type="search" placeholder="Поиск по Штабу" autocomplete="off" />
+              <kbd>/</kbd>
+            </label>
+            <span id="syncPill" class="sync-pill"><i></i><span>Синхронизация</span></span>
+            <button id="refresh" class="icon-button" aria-label="Обновить данные" title="Обновить данные">↻</button>
+            <button id="newTaskTop" class="button button-primary">+ Добавить</button>
+            <button id="profileButton" class="profile-button" aria-label="Профиль владельца">АМ</button>
+          </div>
+        </header>
+
+        <main id="view" class="view" tabindex="-1"></main>
+      </section>
+    </div>
+
+    <dialog id="taskDialog" class="modal">
+      <form id="taskForm" class="modal-card">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Рабочее действие</p>
+            <h2 id="taskDialogTitle">Новая задача</h2>
+          </div>
+          <button type="button" class="icon-button" data-close-modal aria-label="Закрыть">×</button>
+        </div>
+
+        <input id="taskId" type="hidden" />
+        <label class="field-label">
+          <span>Название</span>
+          <input id="taskTitle" class="field" required maxlength="180" placeholder="Что нужно сделать?" />
+        </label>
+        <div class="form-grid">
+          <label class="field-label">
+            <span>Проект</span>
+            <select id="taskProject" class="field" required></select>
+          </label>
+          <label class="field-label">
+            <span>Приоритет</span>
+            <select id="taskPriority" class="field">
+              <option value="1">P1 — критично</option>
+              <option value="2">P2 — важно</option>
+              <option value="3" selected>P3 — обычно</option>
+              <option value="4">P4 — низкий</option>
+              <option value="5">P5 — когда-нибудь</option>
+            </select>
+          </label>
+        </div>
+        <label class="field-label">
+          <span>Описание</span>
+          <textarea id="taskDescription" class="field field-textarea" maxlength="1200" placeholder="Контекст и ожидаемый результат"></textarea>
+        </label>
+        <div class="form-grid">
+          <label class="field-label">
+            <span>Статус</span>
+            <select id="taskStatus" class="field">
+              <option value="todo">К выполнению</option>
+              <option value="in_progress">В работе</option>
+              <option value="waiting">Ожидает</option>
+              <option value="done">Выполнено</option>
+              <option value="cancelled">Отменено</option>
+            </select>
+          </label>
+          <label class="field-label">
+            <span>Срок</span>
+            <input id="taskDue" class="field" type="datetime-local" />
+          </label>
+        </div>
+        <div class="form-grid form-grid-three">
+          <label class="field-label">
+            <span>Влияние на результат</span>
+            <select id="taskImpact" class="field">
+              <option value="5">5 — максимальное</option>
+              <option value="4">4 — высокое</option>
+              <option value="3" selected>3 — среднее</option>
+              <option value="2">2 — небольшое</option>
+              <option value="1">1 — минимальное</option>
+            </select>
+          </label>
+          <label class="field-label">
+            <span>Срочность</span>
+            <select id="taskUrgency" class="field">
+              <option value="5">5 — сейчас</option>
+              <option value="4">4 — сегодня</option>
+              <option value="3" selected>3 — скоро</option>
+              <option value="2">2 — не горит</option>
+              <option value="1">1 — без срока</option>
+            </select>
+          </label>
+          <label class="field-label">
+            <span>Ответственный</span>
+            <input id="taskAssignee" class="field" maxlength="120" placeholder="Арслан / агент" />
+          </label>
+        </div>
+        <label class="field-label">
+          <span>Теги</span>
+          <input id="taskTags" class="field" maxlength="240" placeholder="продажи, деньги, follow-up" />
+        </label>
+        <p id="taskFormMessage" class="form-message" role="status"></p>
+        <div class="modal-actions">
+          <button type="button" class="button button-ghost" data-close-modal>Отмена</button>
+          <button id="saveTask" type="submit" class="button button-primary">Сохранить задачу</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="entityDialog" class="modal">
+      <form id="entityForm" class="modal-card modal-card-wide">
+        <div class="modal-header">
+          <div>
+            <p id="entityEyebrow" class="eyebrow">Новая запись</p>
+            <h2 id="entityDialogTitle">Добавить</h2>
+          </div>
+          <button type="button" class="icon-button" data-close-entity aria-label="Закрыть">×</button>
+        </div>
+        <input id="entityKind" type="hidden" />
+        <input id="entityId" type="hidden" />
+        <div id="entityFields" class="dynamic-form"></div>
+        <p id="entityFormMessage" class="form-message" role="status"></p>
+        <div class="modal-actions">
+          <button type="button" class="button button-ghost" data-close-entity>Отмена</button>
+          <button id="saveEntity" type="submit" class="button button-primary">Сохранить</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="commandDialog" class="command-dialog">
+      <div class="command-card">
+        <div class="command-input-wrap">
+          <span>⌕</span>
+          <input id="commandInput" type="search" placeholder="Перейти или создать…" autocomplete="off" />
+          <kbd>esc</kbd>
+        </div>
+        <div id="commandResults" class="command-results"></div>
+      </div>
+    </dialog>
+
+    <dialog id="confirmDialog" class="modal modal-small">
+      <div class="modal-card">
+        <span class="confirm-icon">!</span>
+        <h2 id="confirmTitle">Подтвердите действие</h2>
+        <p id="confirmText" class="muted"></p>
+        <div class="modal-actions">
+          <button id="confirmCancel" class="button button-ghost">Отмена</button>
+          <button id="confirmAction" class="button button-danger">Удалить</button>
+        </div>
+      </div>
+    </dialog>
+
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
