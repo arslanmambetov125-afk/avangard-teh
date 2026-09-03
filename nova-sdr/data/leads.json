@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T05:42:56.263266+00:00",
+  "generated_at": "2026-09-03T10:07:08.864887+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,41 +7,12 @@
     },
     "Google News": {
       "ok": true,
-      "found": 2
+      "found": 0
     },
     "ЭТП ГПБ": {
       "ok": false,
       "error": "<urlopen error timed out>"
     }
   },
-  "leads": [
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82Z1pHbThMRUZ6Nkl2ck1wZVRpV3pxUFFCZGxTVkpqYVpTTkFncmhSZTFDR2hiMW1HcVItczJoSHN1cl9yWHB6UTl5VU8?oc=5",
-      "title": "В Омске выдали разрешение на строительство склада для хранения металла - bk55.ru",
-      "published": "2026-05-12T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "В Омске выдали разрешение на строительство склада для хранения металла bk55.ru",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 113.9
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9KZlhBaHVVVHlKQy1EdTZHLUVrTXVWQUdJQ3NrcWZtOFpGalR1S3laeC1zTFd4X2tYUGsxT1ctNGJzWFZxb2laX1pR?oc=5",
-      "title": "Мэрия выдала Евгению ЧЕРЕМНЫХ разрешение на строительство ещё одного склада-ангара - KVnews.ru",
-      "published": "2026-05-12T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Мэрия выдала Евгению ЧЕРЕМНЫХ разрешение на строительство ещё одного склада-ангара KVnews.ru",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 113.9
-    }
-  ]
+  "leads": []
 }
