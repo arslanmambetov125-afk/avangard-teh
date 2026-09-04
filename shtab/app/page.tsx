@@ -1,5 +1,5 @@
-import KingstoreExperience from "@/components/KingstoreExperience";
+import KingstoreExperienceSafe from "@/components/KingstoreExperienceSafe";
 
 export default function Home() {
-  return <KingstoreExperience />;
+  return <KingstoreExperienceSafe />;
 }
