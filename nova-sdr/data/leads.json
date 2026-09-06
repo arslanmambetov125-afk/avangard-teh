@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T23:57:23.862958+00:00",
+  "generated_at": "2026-09-06T03:53:01.662399+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -18,16 +18,16 @@
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
-      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - НИА «Нижний Новгород",
+      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - niann.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках НИА «Нижний Новгород",
+      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках niann.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 25.7
+      "age_days": 25.9
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 116.7
+      "age_days": 116.9
     }
   ]
 }
