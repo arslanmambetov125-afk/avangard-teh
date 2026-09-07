@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T01:02:14.997246+00:00",
+  "generated_at": "2026-09-07T05:59:36.216885+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 4
+      "found": 3
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -18,30 +18,16 @@
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
-      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - НИА «Нижний Новгород",
+      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - niann.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках НИА «Нижний Новгород",
+      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках niann.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 26.8
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82Z1pHbThMRUZ6Nkl2ck1wZVRpV3pxUFFCZGxTVkpqYVpTTkFncmhSZTFDR2hiMW1HcVItczJoSHN1cl9yWHB6UTl5VU8?oc=5",
-      "title": "В Омске выдали разрешение на строительство склада для хранения металла - bk55.ru",
-      "published": "2026-05-12T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "В Омске выдали разрешение на строительство склада для хранения металла bk55.ru",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 117.8
+      "age_days": 27.0
     },
     {
       "source": "google_news",
@@ -55,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 117.8
+      "age_days": 118.0
     }
   ]
 }
