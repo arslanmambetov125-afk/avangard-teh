@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T23:03:23.188164+00:00",
+  "generated_at": "2026-09-08T01:08:35.918434+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 3
+      "found": 4
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,6 +15,20 @@
     }
   },
   "leads": [
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VaWFhcmhVQ19DZXJmMzdVQlVvdlZ1MkUwT3hhVC1EdkZzR3NjclBUanFieVI2TzhFMVNpV0ZOYzhrNFNDRHdCZ1dwRXgySVJ30gFWQVVfeXFMT0pXU3RVaXNBZEVlN2lKc1BPYmNxbDlOTjJ1UVpRWm1SNFhqVnhwSC14dTRPajFuNGRhMGJrU2lpUmpEZzVfYkFXQ3JVb2NuVmgwTnotMmc?oc=5",
+      "title": "Прокуратура отменила разрешение на строительство склада в Лермонтове - АТВ-Ставрополь",
+      "published": "2026-08-18T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Прокуратура отменила разрешение на строительство склада в Лермонтове АТВ-Ставрополь",
+      "score": 74,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 20.8
+    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
@@ -27,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 27.7
+      "age_days": 27.8
     },
     {
       "source": "google_news",
@@ -41,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 118.7
+      "age_days": 118.8
     }
   ]
 }
