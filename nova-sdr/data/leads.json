@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T06:35:36.550334+00:00",
+  "generated_at": "2026-09-09T11:50:16.826912+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 4
+      "found": 3
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 22.0
+      "age_days": 22.2
     },
     {
       "source": "google_news",
@@ -41,21 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 29.0
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9KZlhBaHVVVHlKQy1EdTZHLUVrTXVWQUdJQ3NrcWZtOFpGalR1S3laeC1zTFd4X2tYUGsxT1ctNGJzWFZxb2laX1pR?oc=5",
-      "title": "Мэрия выдала Евгению ЧЕРЕМНЫХ разрешение на строительство ещё одного склада-ангара - KVnews.ru",
-      "published": "2026-05-12T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Мэрия выдала Евгению ЧЕРЕМНЫХ разрешение на строительство ещё одного склада-ангара KVnews.ru",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 120.0
+      "age_days": 29.2
     }
   ]
 }
