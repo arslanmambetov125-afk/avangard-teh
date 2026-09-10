@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:18:25.025162+00:00",
+  "generated_at": "2026-09-10T20:59:09.775654+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 0.4
+      "age_days": 0.5
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VaWFhcmhVQ19DZXJmMzdVQlVvdlZ1MkUwT3hhVC1EdkZzR3NjclBUanFieVI2TzhFMVNpV0ZOYzhrNFNDRHdCZ1dwRXgySVJ30gFWQVVfeXFMT0pXU3RVaXNBZEVlN2lKc1BPYmNxbDlOTjJ1UVpRWm1SNFhqVnhwSC14dTRPajFuNGRhMGJrU2lpUmpEZzVfYkFXQ3JVb2NuVmgwTnotMmc?oc=5",
-      "title": "Прокуратура отменила разрешение на строительство склада в Лермонтове - atvmedia.ru",
+      "title": "Прокуратура отменила разрешение на строительство склада в Лермонтове - АТВ-Ставрополь",
       "published": "2026-08-18T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Прокуратура отменила разрешение на строительство склада в Лермонтове atvmedia.ru",
+      "summary": "Прокуратура отменила разрешение на строительство склада в Лермонтове АТВ-Ставрополь",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 23.5
+      "age_days": 23.6
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 30.5
+      "age_days": 30.6
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 30.5
+      "age_days": 30.6
     }
   ]
 }
