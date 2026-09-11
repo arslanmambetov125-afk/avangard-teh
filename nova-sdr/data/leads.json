@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T23:04:43.201136+00:00",
+  "generated_at": "2026-09-11T01:00:49.230167+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 5
+      "found": 4
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 0.6
+      "age_days": 0.7
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 23.7
+      "age_days": 23.8
     },
     {
       "source": "google_news",
@@ -55,21 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 30.7
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9DYUQtWEZpWFkwcWkxRUdYWjRtNDNXSVRzR1d3RzYyeHFDcWZrY2FFOThFMmN5TmpMd2s5OU5iUmdaNlpoa2lQWmx1czNNaVdIZ0c5RmUtYXBWZGp3ZlE?oc=5",
-      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - Новости Нижнего Новгорода",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде Новости Нижнего Новгорода",
-      "score": 74,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 30.7
+      "age_days": 30.8
     }
   ]
 }
