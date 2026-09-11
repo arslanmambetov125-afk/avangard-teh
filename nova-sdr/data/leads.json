@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T01:00:49.230167+00:00",
+  "generated_at": "2026-09-11T05:51:10.277026+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 4
+      "found": 5
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -18,16 +18,16 @@
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
-      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
+      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - abn.agency",
       "published": "2026-09-10T09:03:21+00:00",
       "region": "Россия",
-      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
+      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово abn.agency",
       "score": 78,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 0.7
+      "age_days": 0.9
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 23.8
+      "age_days": 24.0
     },
     {
       "source": "google_news",
@@ -55,7 +55,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 30.8
+      "age_days": 31.0
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9DYUQtWEZpWFkwcWkxRUdYWjRtNDNXSVRzR1d3RzYyeHFDcWZrY2FFOThFMmN5TmpMd2s5OU5iUmdaNlpoa2lQWmx1czNNaVdIZ0c5RmUtYXBWZGp3ZlE?oc=5",
+      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - Новости Нижнего Новгорода",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде Новости Нижнего Новгорода",
+      "score": 74,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 31.0
     }
   ]
 }
