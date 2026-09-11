@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T14:23:48.280393+00:00",
+  "generated_at": "2026-09-11T17:48:50.881622+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.2
+      "age_days": 1.4
     },
     {
       "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VaWFhcmhVQ19DZXJmMzdVQlVvdlZ1MkUwT3hhVC1EdkZzR3NjclBUanFieVI2TzhFMVNpV0ZOYzhrNFNDRHdCZ1dwRXgySVJ30gFWQVVfeXFMT0pXU3RVaXNBZEVlN2lKc1BPYmNxbDlOTjJ1UVpRWm1SNFhqVnhwSC14dTRPajFuNGRhMGJrU2lpUmpEZzVfYkFXQ3JVb2NuVmgwTnotMmc?oc=5",
-      "title": "Прокуратура отменила разрешение на строительство склада в Лермонтове - АТВ-Ставрополь",
-      "published": "2026-08-18T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
+      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - НИА «Нижний Новгород",
+      "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Прокуратура отменила разрешение на строительство склада в Лермонтове АТВ-Ставрополь",
+      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках НИА «Нижний Новгород",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 24.3
+      "age_days": 31.5
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 31.3
+      "age_days": 31.5
     }
   ]
 }
