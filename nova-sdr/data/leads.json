@@ -1,47 +1,18 @@
 {
-  "generated_at": "2026-09-12T00:35:28.077285+00:00",
+  "generated_at": "2026-09-12T05:00:00.123224+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
       "error": "<urlopen error timed out>"
     },
     "Google News": {
-      "ok": true,
-      "found": 3
+      "ok": false,
+      "error": "HTTP Error 503: Service Unavailable"
     },
     "ЭТП ГПБ": {
       "ok": false,
       "error": "<urlopen error timed out>"
     }
   },
-  "leads": [
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
-      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
-      "published": "2026-09-10T09:03:21+00:00",
-      "region": "Россия",
-      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
-      "score": 78,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.6
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
-      "title": "Власти выдали разрешение на строительство склада Wildberries в Новинках - НИА «Нижний Новгород",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Власти выдали разрешение на строительство склада Wildberries в Новинках НИА «Нижний Новгород",
-      "score": 74,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 31.7
-    }
-  ]
+  "leads": []
 }
