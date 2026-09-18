@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T05:36:26.046379+00:00",
+  "generated_at": "2026-09-18T10:02:57.228885+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 5
+      "found": 4
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,21 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 0.8
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMmNfS1pmWGI5cUdtaGhLNXlrUUMzdF9rNFR1QTZac0c5eVpROWNQSzA5aU0yZ3BKbVBBdTEyRmViRDgydk5qV0JTWFVnX0VEaDlVbmtLQXBCTDM5YU1ZRUhyTEhObEdwQlZoS0NyOG13MVQwbWpfaVJ1cWVETE1nQWhCdWItYnYxNE03TzZ6VTI0OGw2V2FoUWJnU3ZsRmpxTnp3?oc=5",
-      "title": "На Ставрополье построят складской комплекс за 8 млрд рублей - InvestFuture",
-      "published": "2026-09-16T13:43:05+00:00",
-      "region": "Россия",
-      "summary": "На Ставрополье построят складской комплекс за 8 млрд рублей InvestFuture",
-      "score": 78,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.7
+      "age_days": 1.0
     },
     {
       "source": "google_news",
@@ -55,21 +41,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 7.9
+      "age_days": 8.0
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNYUDFqejZZdTcwSTZBZUhrY3RNcGFvVEFNMVUyNW9uUi1rT1FVZnQyVE5IdGp6RUZXVi1lMXNCTnJkYS1tZ0RnMEtrTEZLNzh2ZnV3Y2o3MTlJeWdmMkFiOHRUajhMSDNMdm5wQTBSWUNlRWtQMDkxX0tld3ExZ2hRSlpBRURs?oc=5",
-      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - Правда.Ру",
+      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - pravda.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров Правда.Ру",
+      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров pravda.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 37.9
+      "age_days": 38.1
     },
     {
       "source": "google_news",
@@ -83,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 44.9
+      "age_days": 45.1
     }
   ]
 }
