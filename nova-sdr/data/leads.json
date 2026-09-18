@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T17:46:42.519641+00:00",
+  "generated_at": "2026-09-18T20:00:55.764787+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 4
+      "found": 3
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,20 +15,6 @@
     }
   },
   "leads": [
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSzFZRWVmb0dLMHdxVkZBcHFXVU9reE51Q3RpSTFJTFRJUVZFNXBhYl9iUXRGXzdwXzg1RElheWFMTGxCZjhrek9VTGJkOGNsTC1nUVR1MHBfNndScllmTDd0YmpuSmprbGJpcmJEcC1tcHZ4dW9QcDRnOV9oM2Z6WURJU3JEWFBPM3NpX295aW1FX1NTdURVLVFWeWVKUWdZTndmYS12Vms?oc=5",
-      "title": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости - trans.ru",
-      "published": "2026-09-17T09:54:43+00:00",
-      "region": "Россия",
-      "summary": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости trans.ru",
-      "score": 78,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.3
-    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
@@ -41,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 8.4
+      "age_days": 8.5
     },
     {
       "source": "google_news",
@@ -55,21 +41,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 38.4
+      "age_days": 38.5
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcXBNZWluVV9VeXBIQjNNbGlpaDJWd2hybVlpWEJrZ3RrcG8wZ0RjNGdIOFpiUDg5cmZUZGFzN1EzWWR1ZlZhampyQzNKRnNQWDN2Zm16M0EyUUQ3WDhndmFBWjZXU0JMalZyZ19pMnV6c2tVN29ueS05bzBrcFgxcW11cnVhLWlUQkJ0N2xxUkRvTFRtN29Zdzh0TEZVbk16ekNtUdIBqgFBVV95cUxNS1Q2ZFB2MVc4MW1ZYkd1V25rSEhWUENJdmItZjN4Zm04cjJST0J3VDdDODhyN0M3R2U4QldDZFM3WndhZkduQVprMW5jZzhmdHNiREhRaENMVUQ4cXNobU1CWjV5TGV5SU9qZEZsS0FhdXhQblp3RzMwR2xOWEJDUnJSQTVVZGQ0SnhnRDhWeVdqNndicF9COHNJZW9JTDBpazBHdHViS2JhZw?oc=5",
-      "title": "Wildberries готовит масштабное расширение складов в Астане и Алматы - arbatmedia.kz",
+      "title": "Wildberries готовит масштабное расширение складов в Астане и Алматы - Arbat media",
       "published": "2026-08-04T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Wildberries готовит масштабное расширение складов в Астане и Алматы arbatmedia.kz",
+      "summary": "Wildberries готовит масштабное расширение складов в Астане и Алматы Arbat media",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 45.4
+      "age_days": 45.5
     }
   ]
 }
