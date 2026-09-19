@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T00:34:03.829035+00:00",
+  "generated_at": "2026-09-19T04:59:53.263124+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 4
+      "found": 3
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -17,31 +17,17 @@
   "leads": [
     {
       "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSzFZRWVmb0dLMHdxVkZBcHFXVU9reE51Q3RpSTFJTFRJUVZFNXBhYl9iUXRGXzdwXzg1RElheWFMTGxCZjhrek9VTGJkOGNsTC1nUVR1MHBfNndScllmTDd0YmpuSmprbGJpcmJEcC1tcHZ4dW9QcDRnOV9oM2Z6WURJU3JEWFBPM3NpX295aW1FX1NTdURVLVFWeWVKUWdZTndmYS12Vms?oc=5",
-      "title": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости - trans.ru",
-      "published": "2026-09-17T09:54:43+00:00",
-      "region": "Россия",
-      "summary": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости trans.ru",
-      "score": 78,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.6
-    },
-    {
-      "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
-      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - abn.agency",
+      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
       "published": "2026-09-10T09:03:21+00:00",
       "region": "Россия",
-      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово abn.agency",
+      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
       "score": 78,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 8.6
+      "age_days": 8.8
     },
     {
       "source": "google_news",
@@ -55,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 38.7
+      "age_days": 38.9
     },
     {
       "source": "google_news",
@@ -69,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 45.7
+      "age_days": 45.9
     }
   ]
 }
