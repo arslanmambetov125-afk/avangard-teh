@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T13:16:24.494399+00:00",
+  "generated_at": "2026-09-19T16:33:54.963858+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 2.1
+      "age_days": 2.3
     },
     {
       "source": "google_news",
@@ -41,21 +41,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 9.2
+      "age_days": 9.3
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNYUDFqejZZdTcwSTZBZUhrY3RNcGFvVEFNMVUyNW9uUi1rT1FVZnQyVE5IdGp6RUZXVi1lMXNCTnJkYS1tZ0RnMEtrTEZLNzh2ZnV3Y2o3MTlJeWdmMkFiOHRUajhMSDNMdm5wQTBSWUNlRWtQMDkxX0tld3ExZ2hRSlpBRURs?oc=5",
-      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - Правда.Ру",
+      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - pravda.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров Правда.Ру",
+      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров pravda.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 39.3
+      "age_days": 39.4
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 46.3
+      "age_days": 46.4
     }
   ]
 }
