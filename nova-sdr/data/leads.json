@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T23:03:47.536247+00:00",
+  "generated_at": "2026-09-20T01:02:22.002628+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 3
+      "found": 4
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,6 +15,20 @@
     }
   },
   "leads": [
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSzFZRWVmb0dLMHdxVkZBcHFXVU9reE51Q3RpSTFJTFRJUVZFNXBhYl9iUXRGXzdwXzg1RElheWFMTGxCZjhrek9VTGJkOGNsTC1nUVR1MHBfNndScllmTDd0YmpuSmprbGJpcmJEcC1tcHZ4dW9QcDRnOV9oM2Z6WURJU3JEWFBPM3NpX295aW1FX1NTdURVLVFWeWVKUWdZTndmYS12Vms?oc=5",
+      "title": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости - trans.ru",
+      "published": "2026-09-17T09:54:43+00:00",
+      "region": "Россия",
+      "summary": "В Минеральных Водах построят складской комплекс по высшему стандарту недвижимости trans.ru",
+      "score": 78,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
+      "age_days": 2.6
+    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
@@ -27,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 9.6
+      "age_days": 9.7
     },
     {
       "source": "google_news",
@@ -41,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 39.7
+      "age_days": 39.8
     },
     {
       "source": "google_news",
@@ -55,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 46.7
+      "age_days": 46.8
     }
   ]
 }
