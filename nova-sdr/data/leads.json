@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T19:48:04.728505+00:00",
+  "generated_at": "2026-09-20T21:56:46.586935+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 10.4
+      "age_days": 10.5
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcXBNZWluVV9VeXBIQjNNbGlpaDJWd2hybVlpWEJrZ3RrcG8wZ0RjNGdIOFpiUDg5cmZUZGFzN1EzWWR1ZlZhampyQzNKRnNQWDN2Zm16M0EyUUQ3WDhndmFBWjZXU0JMalZyZ19pMnV6c2tVN29ueS05bzBrcFgxcW11cnVhLWlUQkJ0N2xxUkRvTFRtN29Zdzh0TEZVbk16ekNtUdIBqgFBVV95cUxNS1Q2ZFB2MVc4MW1ZYkd1V25rSEhWUENJdmItZjN4Zm04cjJST0J3VDdDODhyN0M3R2U4QldDZFM3WndhZkduQVprMW5jZzhmdHNiREhRaENMVUQ4cXNobU1CWjV5TGV5SU9qZEZsS0FhdXhQblp3RzMwR2xOWEJDUnJSQTVVZGQ0SnhnRDhWeVdqNndicF9COHNJZW9JTDBpazBHdHViS2JhZw?oc=5",
-      "title": "Wildberries готовит масштабное расширение складов в Астане и Алматы - Arbat media",
+      "title": "Wildberries готовит масштабное расширение складов в Астане и Алматы - arbatmedia.kz",
       "published": "2026-08-04T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Wildberries готовит масштабное расширение складов в Астане и Алматы Arbat media",
+      "summary": "Wildberries готовит масштабное расширение складов в Астане и Алматы arbatmedia.kz",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 47.5
+      "age_days": 47.6
     }
   ]
 }
