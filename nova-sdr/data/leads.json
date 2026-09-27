@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T17:42:09.324694+00:00",
+  "generated_at": "2026-09-27T20:26:21.447749+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 17.4
+      "age_days": 17.6
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 47.1
+      "age_days": 47.2
     },
     {
       "source": "google_news",
@@ -55,21 +55,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 47.4
+      "age_days": 47.6
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9DYUQtWEZpWFkwcWkxRUdYWjRtNDNXSVRzR1d3RzYyeHFDcWZrY2FFOThFMmN5TmpMd2s5OU5iUmdaNlpoa2lQWmx1czNNaVdIZ0c5RmUtYXBWZGp3ZlE?oc=5",
-      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - www.nn.ru",
+      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - nn.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде www.nn.ru",
+      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде nn.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 47.4
+      "age_days": 47.6
     },
     {
       "source": "google_news",
@@ -83,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 54.4
+      "age_days": 54.6
     }
   ]
 }
