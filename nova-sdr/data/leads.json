@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T19:26:15.417733+00:00",
+  "generated_at": "2026-09-29T23:07:04.998894+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -18,16 +18,16 @@
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
-      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
+      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - abn.agency",
       "published": "2026-09-10T07:00:00+00:00",
       "region": "Россия",
-      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
+      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово abn.agency",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 19.5
+      "age_days": 19.7
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 49.2
+      "age_days": 49.3
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 49.5
+      "age_days": 49.7
     },
     {
       "source": "google_news",
@@ -69,21 +69,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 49.5
+      "age_days": 49.7
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNjJvblh5Z2g4T0NLRjZXUnpPa19pQWxKYXMzVHJsU0tid0dPOW5EWU1saEdGY0RPb0E5VHhoVVU3Y202X21XMy0tQWEyRTU5WE5RN3owRlI1dnFOZGFoZUZ2OU4wTUhZeUlZVS1PU0kyVGw1T1luNzhKa05zVUZ2ME9aWjdzM1RvcUplQ2MzdGVkR2lQdWg4NzU4THE3S0t4YjBvS1p5VTN0Q1hzTUMxdzdB?oc=5",
-      "title": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде - NewsNN.ru",
+      "title": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде - newsnn.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде NewsNN.ru",
+      "summary": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде newsnn.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 49.5
+      "age_days": 49.7
     },
     {
       "source": "google_news",
@@ -97,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 56.5
+      "age_days": 56.7
     }
   ]
 }
