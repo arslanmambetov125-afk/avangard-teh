@@ -30,5 +30,11 @@
         }
       ]
     }
-  ]
+  ],
+  "ignoreCommand": "exit 1",
+  "functions": {
+    "api/department-run.js": {
+      "maxDuration": 60
+    }
+  }
 }
