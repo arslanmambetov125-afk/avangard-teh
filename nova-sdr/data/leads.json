@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T01:26:56.517846+00:00",
+  "generated_at": "2026-09-29T07:21:35.924172+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 6
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,20 +15,6 @@
     }
   },
   "leads": [
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
-      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
-      "published": "2026-09-10T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
-      "score": 74,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 18.8
-    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9oOHJJYm9ZblNBUG5pd25XbXppZi1CRXgyRWZSYWdUTHh0bmkxaWpfQ0Z5UDVXTEVKTzFfV21qeDRzeXlmQ25YeA?oc=5",
@@ -41,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 48.4
+      "age_days": 48.6
     },
     {
       "source": "google_news",
@@ -55,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 48.8
+      "age_days": 49.0
     },
     {
       "source": "google_news",
@@ -69,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 48.8
+      "age_days": 49.0
     },
     {
       "source": "google_news",
@@ -83,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 48.8
+      "age_days": 49.0
     },
     {
       "source": "google_news",
@@ -97,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 55.8
+      "age_days": 56.0
     }
   ]
 }
