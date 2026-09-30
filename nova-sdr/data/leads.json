@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:02:05.739952+00:00",
+  "generated_at": "2026-09-30T23:42:16.841807+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 20.5
+      "age_days": 20.7
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9oOHJJYm9ZblNBUG5pd25XbXppZi1CRXgyRWZSYWdUTHh0bmkxaWpfQ0Z5UDVXTEVKTzFfV21qeDRzeXlmQ25YeA?oc=5",
-      "title": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries - ProGorodNN",
+      "title": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries - progorodnn.ru",
       "published": "2026-08-11T15:49:56+00:00",
       "region": "Россия",
-      "summary": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries ProGorodNN",
+      "summary": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries progorodnn.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 50.2
+      "age_days": 50.3
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 50.5
+      "age_days": 50.7
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 50.5
+      "age_days": 50.7
     },
     {
       "source": "google_news",
@@ -83,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 57.5
+      "age_days": 57.7
     }
   ]
 }
