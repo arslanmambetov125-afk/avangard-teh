@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T21:18:33.502427+00:00",
+  "generated_at": "2026-10-02T00:55:57.138512+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 6
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 21.6
+      "age_days": 21.7
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9oOHJJYm9ZblNBUG5pd25XbXppZi1CRXgyRWZSYWdUTHh0bmkxaWpfQ0Z5UDVXTEVKTzFfV21qeDRzeXlmQ25YeA?oc=5",
-      "title": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries - ProGorodNN",
+      "title": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries - progorodnn.ru",
       "published": "2026-08-11T15:49:56+00:00",
       "region": "Россия",
-      "summary": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries ProGorodNN",
+      "summary": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries progorodnn.ru",
       "score": 74,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 51.2
+      "age_days": 51.4
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 51.6
+      "age_days": 51.7
     },
     {
       "source": "google_news",
@@ -69,21 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 51.6
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNjJvblh5Z2g4T0NLRjZXUnpPa19pQWxKYXMzVHJsU0tid0dPOW5EWU1saEdGY0RPb0E5VHhoVVU3Y202X21XMy0tQWEyRTU5WE5RN3owRlI1dnFOZGFoZUZ2OU4wTUhZeUlZVS1PU0kyVGw1T1luNzhKa05zVUZ2ME9aWjdzM1RvcUplQ2MzdGVkR2lQdWg4NzU4THE3S0t4YjBvS1p5VTN0Q1hzTUMxdzdB?oc=5",
-      "title": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде - newsnn.ru",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Построят или нет? Решена судьба склада Wildberries в Нижнем Новгороде newsnn.ru",
-      "score": 74,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 51.6
+      "age_days": 51.7
     },
     {
       "source": "google_news",
@@ -97,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 58.6
+      "age_days": 58.7
     }
   ]
 }
