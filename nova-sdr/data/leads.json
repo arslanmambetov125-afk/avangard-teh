@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T19:45:23.820968+00:00",
+  "generated_at": "2026-10-07T23:53:46.519130+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 8
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 27.5
+      "age_days": 27.7
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 57.2
+      "age_days": 57.3
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 57.5
+      "age_days": 57.7
     },
     {
       "source": "google_news",
@@ -69,7 +69,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 57.5
+      "age_days": 57.7
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUXFURE9VX2RoVmpqblhvWWk5ZDI3NHpNZGxaSFU3N0txazBUUzNZbVg2MmZXejhrSEFlak83MndTMW9wajZpdWZfTDVyNEIzMzRtenNDMUJQdm9kV3NXeWNSRXFxdmVTR1VPWkMxa2cwNFFtMGNHLVozcHd0ZWVuRnBvUVctN3ZDM1pWOVZBOTJ4YjNla0Iwb3RMbTAxZXVIb1p2X21IS1JHbF82VXlWZ1A0bXROMVk?oc=5",
+      "title": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries - Нижний сейчас",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries Нижний сейчас",
+      "score": 74,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 57.7
     },
     {
       "source": "google_news",
@@ -83,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 57.5
+      "age_days": 57.7
     },
     {
       "source": "google_news",
@@ -97,7 +111,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.5
+      "age_days": 64.7
     }
   ]
 }
