@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T15:59:44.297477+00:00",
+  "generated_at": "2026-10-14T20:09:25.217061+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 9
+      "found": 10
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 34.4
+      "age_days": 34.5
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.0
+      "age_days": 64.2
     },
     {
       "source": "google_news",
@@ -55,35 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.4
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNYUDFqejZZdTcwSTZBZUhrY3RNcGFvVEFNMVUyNW9uUi1rT1FVZnQyVE5IdGp6RUZXVi1lMXNCTnJkYS1tZ0RnMEtrTEZLNzh2ZnV3Y2o3MTlJeWdmMkFiOHRUajhMSDNMdm5wQTBSWUNlRWtQMDkxX0tld3ExZ2hRSlpBRURs?oc=5",
-      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - Правда.Ру",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров Правда.Ру",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.4
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUXFURE9VX2RoVmpqblhvWWk5ZDI3NHpNZGxaSFU3N0txazBUUzNZbVg2MmZXejhrSEFlak83MndTMW9wajZpdWZfTDVyNEIzMzRtenNDMUJQdm9kV3NXeWNSRXFxdmVTR1VPWkMxa2cwNFFtMGNHLVozcHd0ZWVuRnBvUVctN3ZDM1pWOVZBOTJ4YjNla0Iwb3RMbTAxZXVIb1p2X21IS1JHbF82VXlWZ1A0bXROMVk?oc=5",
-      "title": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries - Нижний сейчас",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries Нижний сейчас",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.4
+      "age_days": 64.5
     },
     {
       "source": "google_news",
@@ -97,7 +69,35 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.4
+      "age_days": 64.5
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNYUDFqejZZdTcwSTZBZUhrY3RNcGFvVEFNMVUyNW9uUi1rT1FVZnQyVE5IdGp6RUZXVi1lMXNCTnJkYS1tZ0RnMEtrTEZLNzh2ZnV3Y2o3MTlJeWdmMkFiOHRUajhMSDNMdm5wQTBSWUNlRWtQMDkxX0tld3ExZ2hRSlpBRURs?oc=5",
+      "title": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров - Правда.Ру",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "В Новинках построят складской комплекс Wildberries площадью 150 тысяч квадратных метров Правда.Ру",
+      "score": 70,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 64.5
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUXFURE9VX2RoVmpqblhvWWk5ZDI3NHpNZGxaSFU3N0txazBUUzNZbVg2MmZXejhrSEFlak83MndTMW9wajZpdWZfTDVyNEIzMzRtenNDMUJQdm9kV3NXeWNSRXFxdmVTR1VPWkMxa2cwNFFtMGNHLVozcHd0ZWVuRnBvUVctN3ZDM1pWOVZBOTJ4YjNla0Iwb3RMbTAxZXVIb1p2X21IS1JHbF82VXlWZ1A0bXROMVk?oc=5",
+      "title": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries - Нижний сейчас",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries Нижний сейчас",
+      "score": 70,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 64.5
     },
     {
       "source": "google_news",
@@ -111,7 +111,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.4
+      "age_days": 64.5
     },
     {
       "source": "google_news",
@@ -125,7 +125,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 71.4
+      "age_days": 71.5
     }
   ]
 }
