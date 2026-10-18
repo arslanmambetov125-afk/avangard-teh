@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T23:18:44.130768+00:00",
+  "generated_at": "2026-10-18T01:13:32.338978+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.3
+      "age_days": 67.4
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.7
+      "age_days": 67.8
     },
     {
       "source": "google_news",
@@ -55,21 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.7
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUXFURE9VX2RoVmpqblhvWWk5ZDI3NHpNZGxaSFU3N0txazBUUzNZbVg2MmZXejhrSEFlak83MndTMW9wajZpdWZfTDVyNEIzMzRtenNDMUJQdm9kV3NXeWNSRXFxdmVTR1VPWkMxa2cwNFFtMGNHLVozcHd0ZWVuRnBvUVctN3ZDM1pWOVZBOTJ4YjNla0Iwb3RMbTAxZXVIb1p2X21IS1JHbF82VXlWZ1A0bXROMVk?oc=5",
-      "title": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries - Нижний сейчас",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries Нижний сейчас",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.7
+      "age_days": 67.8
     },
     {
       "source": "google_news",
@@ -83,7 +69,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.7
+      "age_days": 67.8
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUXFURE9VX2RoVmpqblhvWWk5ZDI3NHpNZGxaSFU3N0txazBUUzNZbVg2MmZXejhrSEFlak83MndTMW9wajZpdWZfTDVyNEIzMzRtenNDMUJQdm9kV3NXeWNSRXFxdmVTR1VPWkMxa2cwNFFtMGNHLVozcHd0ZWVuRnBvUVctN3ZDM1pWOVZBOTJ4YjNla0Iwb3RMbTAxZXVIb1p2X21IS1JHbF82VXlWZ1A0bXROMVk?oc=5",
+      "title": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries - Нижний сейчас",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "Нижегородский минстрой выдал разрешение на строительство склада Wildberries Нижний сейчас",
+      "score": 70,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 67.8
     },
     {
       "source": "google_news",
@@ -97,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 67.7
+      "age_days": 67.8
     },
     {
       "source": "google_news",
@@ -111,7 +111,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 74.7
+      "age_days": 74.8
     }
   ]
 }
