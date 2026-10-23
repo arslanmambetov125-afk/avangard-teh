@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T10:14:08.298513+00:00",
+  "generated_at": "2026-10-23T15:09:56.445775+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 6
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 72.8
+      "age_days": 73.0
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 73.1
+      "age_days": 73.3
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 73.1
+      "age_days": 73.3
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 73.1
+      "age_days": 73.3
     },
     {
       "source": "google_news",
@@ -83,21 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 73.1
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcXBNZWluVV9VeXBIQjNNbGlpaDJWd2hybVlpWEJrZ3RrcG8wZ0RjNGdIOFpiUDg5cmZUZGFzN1EzWWR1ZlZhampyQzNKRnNQWDN2Zm16M0EyUUQ3WDhndmFBWjZXU0JMalZyZ19pMnV6c2tVN29ueS05bzBrcFgxcW11cnVhLWlUQkJ0N2xxUkRvTFRtN29Zdzh0TEZVbk16ekNtUdIBqgFBVV95cUxNS1Q2ZFB2MVc4MW1ZYkd1V25rSEhWUENJdmItZjN4Zm04cjJST0J3VDdDODhyN0M3R2U4QldDZFM3WndhZkduQVprMW5jZzhmdHNiREhRaENMVUQ4cXNobU1CWjV5TGV5SU9qZEZsS0FhdXhQblp3RzMwR2xOWEJDUnJSQTVVZGQ0SnhnRDhWeVdqNndicF9COHNJZW9JTDBpazBHdHViS2JhZw?oc=5",
-      "title": "Wildberries готовит масштабное расширение складов в Астане и Алматы - Arbat media",
-      "published": "2026-08-04T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Wildberries готовит масштабное расширение складов в Астане и Алматы Arbat media",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 80.1
+      "age_days": 73.3
     }
   ]
 }
