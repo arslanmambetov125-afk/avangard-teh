@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T06:05:35.336480+00:00",
+  "generated_at": "2026-10-29T12:53:51.881386+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 8
+      "found": 9
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 49.0
+      "age_days": 49.2
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 79.0
+      "age_days": 79.2
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 79.0
+      "age_days": 79.2
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 79.0
+      "age_days": 79.2
     },
     {
       "source": "google_news",
@@ -83,7 +83,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 79.0
+      "age_days": 79.2
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBaZmxFMFpuN0F5UllPTUd2SHBObWZOSTdkdDRTNF9ZXzB5dHpMYktmb3ZmbjUzeDdMSVFwSEVGRzVPdDR5RVl0SjVBSmt2RGxpZXN3?oc=5",
+      "title": "«РВБ» получила разрешение на строительство склада в Новинках - Бизнес News",
+      "published": "2026-08-11T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "«РВБ» получила разрешение на строительство склада в Новинках Бизнес News",
+      "score": 70,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 79.2
     },
     {
       "source": "google_news",
@@ -97,7 +111,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 79.0
+      "age_days": 79.2
     },
     {
       "source": "google_news",
@@ -111,7 +125,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 86.0
+      "age_days": 86.2
     }
   ]
 }
