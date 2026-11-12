@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T03:22:44.558212+00:00",
+  "generated_at": "2026-11-12T11:36:13.637244+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 9
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,6 +15,34 @@
     }
   },
   "leads": [
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWkNQcE1TSTY2R2hBeWQtdi16ci00YXBFMTI5WXpUV1BHenk1bjNPdzBmbEhYM05GejMwSGRMRG1TRDF4Y2JNOGZmRk1HSVRqUkwteHJ6dEsyXzR3TkdIM0QwMGpLOVFWdy02QUhaRmxYVlFHdWFOMm9zbWZMVU43QUt4N0RrdjBJLUtLUHFsbVZaeGV5U0FXZFg1YkhYck5sXzhNQ2gyLXM?oc=5",
+      "title": "«Сахалинэнерго» построит новый склад ангарного типа в Южно-Сахалинске - Строительство.ру",
+      "published": "2026-11-12T06:50:26+00:00",
+      "region": "Россия",
+      "summary": "«Сахалинэнерго» построит новый склад ангарного типа в Южно-Сахалинске Строительство.ру",
+      "score": 78,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
+      "age_days": 0.2
+    },
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaF81Qm9LSHRmTy1nN01TZmhFRG1MYTZ1TTBZXzhzSW9pU0xiOUh3VnpEYTRKLVVlVU15amJXUERsNnNSYXczM0NwOUROd2dXdk9NMElMQWlHU3E0WTN6MVhKTWU2TFZwOGNFd3VoZjF1T282dkpfdF9wQ3NVLXl2MmV3T08zNHlvcDVkaDBUa2U1S05xaF9BVE9PeWF2eExsSlFRbjhCdm5WMDFYejJ5S0RobjNHTDc2UFk0Rg?oc=5",
+      "title": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово - Агентство Бизнес Новостей",
+      "published": "2026-09-10T07:00:00+00:00",
+      "region": "Россия",
+      "summary": "«Осиновая роща» получила разрешение на строительство склада на 30,6 тыс. кв. м в Парголово Агентство Бизнес Новостей",
+      "score": 70,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 63.2
+    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
@@ -27,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 92.8
+      "age_days": 93.2
     },
     {
       "source": "google_news",
@@ -41,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 92.8
+      "age_days": 93.2
     },
     {
       "source": "google_news",
@@ -55,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 92.8
+      "age_days": 93.2
     },
     {
       "source": "google_news",
@@ -69,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 92.8
+      "age_days": 93.2
     },
     {
       "source": "google_news",
@@ -83,7 +111,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 92.8
+      "age_days": 93.2
     },
     {
       "source": "google_news",
@@ -97,7 +125,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 99.8
+      "age_days": 100.2
     }
   ]
 }
