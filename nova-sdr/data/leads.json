@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:27:02.567566+00:00",
+  "generated_at": "2026-11-14T01:38:24.720666+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 9
+      "found": 7
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -27,7 +27,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития · ≤ 14 дней",
-      "age_days": 1.6
+      "age_days": 1.8
     },
     {
       "source": "google_news",
@@ -41,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 64.6
+      "age_days": 64.8
     },
     {
       "source": "google_news",
@@ -55,21 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 94.6
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3plYmlUY09WWk9WbG1wazh3WjNTZnVxaXdMb3o3SXl1d3c1dVBCUW5KMzhfMHRPLTdaTWpyZU9aVm9qTW9LN29uUFlaOHlpdFRPQnl4M0FRY0JKRmpvTk5YSU1OaWhyNHBsVDctcExzd3lHbUVWWVBCN3dNVWR0eVR0YUdKX3FSeVZ0cWhSZ09tckkyMjdSZkxfTllWRGtoMjlaRXhzU1d2ajBhZVo5Y3NIdw?oc=5",
-      "title": "Минстрой выдал разрешение на строительство склада Wildberries в Новинках - Новости Нижнего Новгорода сегодня — В городе N",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Минстрой выдал разрешение на строительство склада Wildberries в Новинках Новости Нижнего Новгорода сегодня — В городе N",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 94.6
+      "age_days": 94.8
     },
     {
       "source": "google_news",
@@ -83,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 94.6
+      "age_days": 94.8
     },
     {
       "source": "google_news",
@@ -97,21 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 94.6
-    },
-    {
-      "source": "google_news",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9oOHJJYm9ZblNBUG5pd25XbXppZi1CRXgyRWZSYWdUTHh0bmkxaWpfQ0Z5UDVXTEVKTzFfV21qeDRzeXlmQ25YeA?oc=5",
-      "title": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries - ProGorodNN",
-      "published": "2026-08-11T07:00:00+00:00",
-      "region": "Россия",
-      "summary": "Минстрой Нижегородской области выдал разрешение на строительство склада Wildberries ProGorodNN",
-      "score": 70,
-      "status": "HIGH",
-      "type": "PREDICTIVE",
-      "product": "",
-      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 94.6
+      "age_days": 94.8
     },
     {
       "source": "google_news",
@@ -125,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 101.6
+      "age_days": 101.8
     }
   ]
 }
