@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T07:46:59.945874+00:00",
+  "generated_at": "2026-11-19T16:51:01.443903+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -27,21 +27,21 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 100.0
+      "age_days": 100.4
     },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9DYUQtWEZpWFkwcWkxRUdYWjRtNDNXSVRzR1d3RzYyeHFDcWZrY2FFOThFMmN5TmpMd2s5OU5iUmdaNlpoa2lQWmx1czNNaVdIZ0c5RmUtYXBWZGp3ZlE?oc=5",
-      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - Новости Нижнего Новгорода",
+      "title": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде - www.nn.ru",
       "published": "2026-08-11T07:00:00+00:00",
       "region": "Россия",
-      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде Новости Нижнего Новгорода",
+      "summary": "Минстрой выдал разрешение на строительство огромного склада Wildberries в Нижнем Новгороде www.nn.ru",
       "score": 70,
       "status": "HIGH",
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 100.0
+      "age_days": 100.4
     },
     {
       "source": "google_news",
@@ -55,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 100.0
+      "age_days": 100.4
     },
     {
       "source": "google_news",
@@ -69,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 100.0
+      "age_days": 100.4
     },
     {
       "source": "google_news",
@@ -83,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 107.0
+      "age_days": 107.4
     }
   ]
 }
