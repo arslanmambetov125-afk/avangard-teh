@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T03:11:54.595533+00:00",
+  "generated_at": "2026-11-26T12:38:39.541728+00:00",
   "sources": {
     "ЕИС": {
       "ok": false,
@@ -7,7 +7,7 @@
     },
     "Google News": {
       "ok": true,
-      "found": 7
+      "found": 8
     },
     "ЭТП ГПБ": {
       "ok": false,
@@ -15,6 +15,20 @@
     }
   },
   "leads": [
+    {
+      "source": "google_news",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWkNQcE1TSTY2R2hBeWQtdi16ci00YXBFMTI5WXpUV1BHenk1bjNPdzBmbEhYM05GejMwSGRMRG1TRDF4Y2JNOGZmRk1HSVRqUkwteHJ6dEsyXzR3TkdIM0QwMGpLOVFWdy02QUhaRmxYVlFHdWFOMm9zbWZMVU43QUt4N0RrdjBJLUtLUHFsbVZaeGV5U0FXZFg1YkhYck5sXzhNQ2gyLXM?oc=5",
+      "title": "«Сахалинэнерго» построит новый склад ангарного типа в Южно-Сахалинске - Строительство.RU",
+      "published": "2026-11-12T06:50:26+00:00",
+      "region": "Россия",
+      "summary": "«Сахалинэнерго» построит новый склад ангарного типа в Южно-Сахалинске Строительство.RU",
+      "score": 74,
+      "status": "HIGH",
+      "type": "PREDICTIVE",
+      "product": "",
+      "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
+      "age_days": 14.2
+    },
     {
       "source": "google_news",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBZZHMyVmQ5Zlo4TWJjOG16OFNYZ3hBSWZPNUV2UmtoMWVyUHlWSjZaeDRVR0Q4NUNPTFJPUC1yNVk2elhJTEE?oc=5",
@@ -27,7 +41,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 106.8
+      "age_days": 107.2
     },
     {
       "source": "google_news",
@@ -41,7 +55,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 106.8
+      "age_days": 107.2
     },
     {
       "source": "google_news",
@@ -55,7 +69,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 106.8
+      "age_days": 107.2
     },
     {
       "source": "google_news",
@@ -69,7 +83,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 106.8
+      "age_days": 107.2
     },
     {
       "source": "google_news",
@@ -83,7 +97,7 @@
       "type": "PREDICTIVE",
       "product": "",
       "why": "свежее событие по складскому/логистическому объекту · объект ещё в стадии строительства/развития",
-      "age_days": 113.8
+      "age_days": 114.2
     }
   ]
 }
